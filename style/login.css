@@ -1,0 +1,293 @@
+#body {
+    height: auto;
+    width: auto;
+    background-color: #e5e9ec;
+    color: black;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+
+    overflow: hidden;
+}
+
+#signup-container {
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    background-color: #eeeeee;
+    color: black;
+    border: none;
+    border-radius: 1vw;
+
+    height: fit-content;
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: #fefefe 5px 5px 5px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#top {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    width: auto;
+}
+
+#logo {
+    display: flex;
+    position: inherit;
+    align-self: center;
+
+    margin-left: auto;
+
+    transition: transform 0.35s ease, rotate 1s ease;
+
+    &:hover {
+        transform: scale(1.1) rotate(120deg);
+    }
+
+    &:active {
+        transform: scale(0.99) rotate(240deg);
+    }
+
+    backface-visibility: hidden;
+}
+
+#signup-text {
+    align-self: center;
+    justify-self: center;
+}
+
+#top-seperator {
+    background-color: #dddddd;
+    margin-top: 1vh;
+
+    display: flex;
+    flex-grow: 1;
+
+    height: 0.25vh;
+    width: auto;
+}
+
+#credentials-container {
+    background-color: none;
+    color: black;
+    margin-top: 1vh;
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#infotext {
+    color: #687172;
+    margin-top: 0.25vh;
+    font-size: smaller;
+
+    align-self: center;
+    justify-self: center;
+}
+
+#email-input {
+    background-color: #dedede;
+    color: black;
+    margin-top: 0.25vh;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        background-color: white;
+        color: #444444;
+        transform: scale(1.01);
+        outline: none;
+    }
+
+    &:hover {
+        color: black;
+        transform: scale(1.01);
+        outline: solid 1px #999999;
+    }
+    backface-visibility: hidden;
+}
+
+#password-input {
+    background-color: #dedede;
+    color: black;
+    margin-top: 0.25vh;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        background-color: white;
+        color: #687172;
+        transform: scale(1.01);
+        outline: none;
+    }
+
+    &:hover {
+        color: black;
+        transform: scale(1.01);
+        outline: solid 1px #999999;
+    }
+    backface-visibility: hidden;
+}
+
+#submit-button {
+    background-color: #cccccc;
+    color: black;
+    margin-top: 1vh;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        color: #687172;
+        transform: scale(1.01);
+        outline: none;
+    }
+
+    &:hover {
+        color: black;
+        transform: scale(1.01);
+        outline: solid 1px #687172;
+    }
+
+    &:active {
+        transform: scale(0.99);
+    }
+    backface-visibility: hidden;
+}
+
+#bottom {
+    margin-top: 1vh;
+
+    color: #687172;
+    font-size: small;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#redstar {
+    position: relative;
+    display: flex;
+
+    color: red;
+    font-size: small;
+
+    
+}
+
+#tos-text {
+    position: relative;
+    display: flex;
+
+    color: #687172;
+}
+
+#registration-button{
+    background-color: none;
+    color: blue;
+
+    height: fit-content;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    margin-left: -0.65vw;
+
+    display: flex;
+
+    align-items: center;
+    justify-items: center;
+
+    justify-self: center;
+    align-self: center;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        color: blue;
+        transform: scale(1.1);
+        outline: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: blue;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &:active {
+        color: blue;
+        transform: scale(0.99);
+        cursor: pointer;
+    }
+    backface-visibility: hidden;
+}
+
+#indicator {
+    background: black;
+
+    display: flex;
+    position: absolute;
+
+    border: none;
+    border-radius: 10vw;
+
+    height: 0.5vh;
+    width: 1vw;
+
+    margin-top: 8vh;
+    margin-left: 2vw;
+}
