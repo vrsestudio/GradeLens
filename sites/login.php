@@ -12,12 +12,12 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     <title>Login</title>
     <link rel="stylesheet" href="../style/login.css">
 </head>
-<body id="body" background="../source/default_background_light.webp">
+<body id="body" background="../source/background/default_background_light.webp">
     <section id="signup-container">
         <div id="top">
             <h1 id="signup-text">LOGIN /</h1><h1 type="button" id="registration-button" onclick="window.location.href='./signup.php'">SIGNUP</h1>
             <div id="indicator"></div>
-            <a id="logo"><img src="../source/logo_gradelens_dark_transparent.webp" alt="Logo" width="50px" height="50px"></a>
+            <a id="logo"><img src="../source/project/logo_gradelens_dark_transparent.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
 
