@@ -1,0 +1,16 @@
+#navi-section {
+    background-color: none;
+}
+
+#navi-container{
+    background-color: red;
+    width: 90vw;
+    height: 20vh;
+    border-radius: 1vw;
+}
+
+#navi-test{
+    background-color: aqua;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
