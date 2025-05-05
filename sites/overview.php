@@ -5,5 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overview</title>
 </head>
-    <?php include "./invoke/navigation.php"?>
+    <section id="navi-section">
+        <?php include "./invoke/navigation.php"?>
+    </section>
+    <section id="sidebar-section">
+        <?php include "./invoke/sidebar.php"?>
+    </section>
+    <section>
+        <?php include "./invoke/content.php"?>
+    </section>
 </html>
