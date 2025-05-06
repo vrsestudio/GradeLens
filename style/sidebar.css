@@ -1,0 +1,21 @@
+#side-content {
+    background-color: rgb(255, 0, 0);
+    height: 5vh;
+    width: 5vw;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
+
+#side-test {
+    background-color: rgb(255, 0, 0);
+    height: 5vh;
+    width: 5vw;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
