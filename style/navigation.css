@@ -1,16 +1,46 @@
-#navi-section {
-    background-color: none;
-}
-
-#navi-container{
+#navi {
     background-color: red;
-    width: 90vw;
-    height: 20vh;
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc(100vw - 3vw);
+    height: 7.5vh;
+
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    align-items: center;
+    justify-items: center;
+
     border-radius: 1vw;
 }
 
-#navi-test{
-    background-color: aqua;
-    font-size: xx-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#logo {
+    display: flex;
+    position: inherit;
+    align-self: center;
+
+    margin-left: auto;
+
+    transition: transform 0.35s ease, rotate 1s ease;
+
+    &:hover {
+        transform: scale(1.1) rotate(120deg);
+    }
+
+    &:active {
+        transform: scale(0.99) rotate(240deg);
+    }
+
+    backface-visibility: hidden;
 }

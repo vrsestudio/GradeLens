@@ -1,0 +1,34 @@
+#body {
+    background-color: none;
+    overflow: hidden;
+}
+
+#defaultview {
+    background-color: aqua;
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: calc(100vw - 3vw);
+    height: 85.5vh;
+
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 1vw;
+
+    overflow-x: hidden;
+    overflow-x: auto;
+}

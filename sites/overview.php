@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overview</title>
+    <link rel="stylesheet" href="style/overview.css">
+    <link rel="stylesheet" href="../style/navigation.css">
+    <link rel="stylesheet" href="../style/defaultview.css">
 </head>
-    <section id="navi-section">
-        <?php include "./invoke/navigation.php"?>
-    </section>
-    <section id="sidebar-section">
-        <?php include "./invoke/sidebar.php"?>
+
+<body id="overviewbody">
+    <section>
+            <?php include "./invoke/navigation.php"; ?>
     </section>
     <section>
-        <?php include "./invoke/content.php"?>
+            <?php include "./invoke/defaultview.php"; ?>
     </section>
+</body>
+
 </html>

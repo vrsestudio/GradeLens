@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="../../style/navigation.css">
-<section id="navi-section">
-    <div id="navi-container">
-        <p id="navi-test">servus</p>
-    </div>
-</section>
+<nav id="navi">
+    <a id="navi-logo"><img src="../source/project/logo_gradelens_dark_transparent.webp" alt="Logo" width="50px" height="50px"></a>
+</nav>
