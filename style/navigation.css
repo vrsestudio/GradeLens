@@ -1,5 +1,6 @@
 #navi {
-    background-color: red;
+    background-color: #bfcad2;
+    opacity: 90%;
     display: flex;
     flex-grow: 1;
     position: absolute;
@@ -23,6 +24,7 @@
     justify-items: center;
 
     border-radius: 1vw;
+    box-shadow: 2px 2px 3px #cad2d7;
 }
 
 #logo {

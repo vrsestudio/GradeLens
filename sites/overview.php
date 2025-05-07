@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../style/defaultview.css">
 </head>
 
-<body id="overviewbody">
+<body id="overviewbody" background="../source/background/default_background_light.webp">
     <section>
             <?php include "./invoke/navigation.php"; ?>
     </section>
