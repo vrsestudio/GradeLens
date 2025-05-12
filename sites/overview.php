@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/overview.css">
     <link rel="stylesheet" href="../style/navigation.css">
     <link rel="stylesheet" href="../style/defaultview.css">
+    <script src="../scipt/dynamiccontent.js" defer></script>
 </head>
 
 <body id="overviewbody" background="../source/background/default_background_light.webp">
