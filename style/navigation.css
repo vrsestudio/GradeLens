@@ -46,3 +46,98 @@
 
     backface-visibility: hidden;
 }
+
+#button-container {
+    display: flex;
+    margin-left: auto;
+}
+
+#home-button {
+    background: none;
+    display: flex;
+    margin-right: 2vw;
+    border: none;
+
+    border-radius: 1vh;
+    min-height: max-content;
+    min-width: max-content;
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    font-size: 1.25vw;
+    transition: ease 0.35s;
+    &:hover {
+        transform: scale(1.1);
+        font-size: 1.25vw;
+        color: #687172;
+    }
+    backface-visibility: hidden;
+}
+
+#library-button {
+    background: none;
+    display: flex;
+    margin-right: 2vw;
+    border: none;
+
+    border-radius: 1vh;
+    min-height: max-content;
+    min-width: max-content;
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    font-size: 1.25vw;
+    transition: ease 0.35s;
+    &:hover {
+        transform: scale(1.1);
+        font-size: 1.25vw;
+        color: #687172;
+    }
+    backface-visibility: hidden;
+}
+
+#create-button {
+    background: none;
+    display: flex;
+    margin-right: 2vw;
+    border: none;
+
+    border-radius: 1vh;
+    min-height: max-content;
+    min-width: max-content;
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    font-size: 1.25vw;
+    transition: ease 0.35s;
+    &:hover {
+        transform: scale(1.1);
+        font-size: 1.25vw;
+        color: #687172;
+    }
+    backface-visibility: hidden;
+}

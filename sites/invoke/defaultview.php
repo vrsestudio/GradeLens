@@ -1,3 +1,3 @@
 <div id="defaultview">
-    Defaultview
+    Default View Pane
 </div>

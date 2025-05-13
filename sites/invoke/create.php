@@ -1,3 +1,3 @@
 <div id="createview">
-    Create View Content
+    Create View Pane
 </div>
