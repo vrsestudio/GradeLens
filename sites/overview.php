@@ -10,7 +10,7 @@
     <script src="../scipt/dynamiccontent.js" defer></script>
 </head>
 
-<body id="dynamiccontentpane" background="../source/background/default_background_light.webp">
+<body id="dynamiccontentpane">
     <section>
             <?php include "./invoke/navigation.php"; ?>
     </section>

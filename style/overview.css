@@ -9,3 +9,7 @@ body {
 #overviewbody {
     overflow: hidden;
 }
+
+#dynamiccontentpane {
+    background-image: url("../source/background/default_background_light.webp");
+}
