@@ -6,16 +6,17 @@
     <title>Overview</title>
     <link rel="stylesheet" href="../style/overview.css">
     <link rel="stylesheet" href="../style/navigation.css">
-    <link rel="stylesheet" href="../style/defaultview.css">
     <script src="../scipt/dynamiccontent.js" defer></script>
 </head>
 
-<body id="dynamiccontentpane">
+<body id="overviewbody">
     <section>
             <?php include "./invoke/navigation.php"; ?>
     </section>
     <section>
+        <div id="dynamiccontentpane">
             <?php include "./invoke/defaultview.php"; ?>
+        </div>
     </section>
 
     <?php

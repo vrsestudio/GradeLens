@@ -63,6 +63,18 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
 
         if ($stmt->fetch() && password_verify($pwd, $hashed_password_from_database)) {
             $_SESSION['uID'] = $uID;
+            setcookie('uID', $uID, time() + 3600, '/'); // Cookie für 1 Stunde
+
+            // IP-Adresse extrahieren
+            $ip = $_SERVER['REMOTE_ADDR'];
+
+            // IP-Adresse in der Datenbank speichern
+            $updateSql = "UPDATE users SET lipa = ? WHERE uID = ?";
+            $updateStmt = $conn->prepare($updateSql);
+            $updateStmt->bind_param("si", $ip, $uID);
+            $updateStmt->execute();
+            $updateStmt->close();
+
             header("Location: overview.php");
             exit();
         } else {
@@ -71,6 +83,12 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
         $stmt->close();
     }
     $conn->close();
+    if ($stmt->fetch() && password_verify($pwd, $hashed_password_from_database)) {
+        $_SESSION['uID'] = $uID;
+        setcookie('uID', $uID, time() + 3600, '/'); // Cookie für 1 Stunde gültig
+        header("Location: overview.php");
+        exit();
+    }
     ?>
 </body>
 </html>

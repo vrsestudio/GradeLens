@@ -5,8 +5,14 @@
             Home
             <span class="arrow">&gt;</span>
         </button>
-        <button id="library-button">Library</button>
-        <button id="create-button">Create</button>
+        <button id="library-button">
+            Library
+            <span class="arrow">&gt;</span>
+        </button>
+        <button id="create-button">
+            Create
+            <span class="arrow">&gt;</span>
+        </button>
     </div>
 </nav>
 
