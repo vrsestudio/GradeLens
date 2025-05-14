@@ -29,7 +29,7 @@ We welcome contributions to GradeLens! If you would like to contribute, please f
 GradeLens is a web-based tool which is hosted on our servers. This means that we are actively collecting data like your IP address, or other identifying information. We are not selling or using this data for our personal enrichment. The collection of this data is purely used for identification to personalise the experience for all our users.
 
 ## Privacy Policy
-GradeLens is committed to protecting your privacy. We do not share your personal information with third parties at all. All data is stored securely and is only accessible by you. For more details, please read our [Privacy Policy](PRIVACY).
+GradeLens is committed to protecting your privacy. We do not share your personal information with third parties at all. All data is stored securely and is only accessible by you. For more details, please read our [Privacy Policy](PRIVACY.md).
 
 ## Acknowledgements
 - Thanks to all the contributors and users who have helped make GradeLens a better tool.
