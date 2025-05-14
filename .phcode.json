@@ -1,7 +1,0 @@
-{
-    "livePreviewUseDevServer": false,
-    "livePreviewServerURL": "http://localhost:8012/GradeLens",
-    "livePreviewServerProjectPath": "",
-    "livePreviewHotReloadSupported": false,
-    "livePreviewFramework": "Custom"
-}
