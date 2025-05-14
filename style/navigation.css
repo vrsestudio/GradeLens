@@ -141,3 +141,16 @@
     }
     backface-visibility: hidden;
 }
+
+#home-button .arrow {
+    display: inline-block;
+    margin-left: 0.5vw;
+    transition: transform 0.3s ease, opacity 0.3s;
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+#home-button:hover .arrow {
+    opacity: 1;
+    transform: rotate(180deg); /* Zeigt nach links wie "<" */
+}

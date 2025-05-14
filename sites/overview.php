@@ -17,6 +17,16 @@
     <section>
             <?php include "./invoke/defaultview.php"; ?>
     </section>
-</body>
 
+    <?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    if (!isset($_SESSION['uID'])) {
+        header("Location: /GradeLens/sites/login.php");
+        exit();
+    }
+    ?>
+
+</body>
 </html>

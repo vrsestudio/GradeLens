@@ -39,6 +39,7 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     </section>
 
     <?php
+    session_start();
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -53,25 +54,23 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email-input"];
         $pwd = $_POST["password-input"];
-    
-        $sql = "SELECT * FROM users WHERE email = '$email'";
-        $result = $conn->query($sql);
-    
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $hashed_password_from_database = $row['password'];
-    
-            if (password_verify($pwd, $hashed_password_from_database)) {
-                header("Location: overview.php");
-            } else {
-                
-            }
-        } else {
-            
-        }
-    }
 
+        $sql = "SELECT uID, password FROM users WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->bind_result($uID, $hashed_password_from_database);
+
+        if ($stmt->fetch() && password_verify($pwd, $hashed_password_from_database)) {
+            $_SESSION['uID'] = $uID;
+            header("Location: overview.php");
+            exit();
+        } else {
+            // Fehlerbehandlung
+        }
+        $stmt->close();
+    }
     $conn->close();
-?>
+    ?>
 </body>
 </html>
