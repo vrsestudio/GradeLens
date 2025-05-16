@@ -6,7 +6,7 @@
     <title>Overview</title>
     <link rel="stylesheet" href="../style/overview.css">
     <link rel="stylesheet" href="../style/navigation.css">
-    <script src="../scipt/dynamiccontent.js" defer></script>
+    <script src="../script/dynamiccontent.js" defer></script>
 </head>
 
 <body id="overviewbody">

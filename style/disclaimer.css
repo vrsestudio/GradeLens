@@ -1,25 +1,196 @@
-#disclaimerOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    overflow: auto;
+/* Global Variables used for styling */
+:root {
+    --background-top: #ced8e0;
+    --background-bottom: #e2e5ed;
+    --border-radius: 1vw;
 }
 
-#closeDisclaimer {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
+#disclaimer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background: black;
+    opacity: 75%;
+    overflow: hidden;
+}
+
+#disclaimer-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#disclaimer-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 75%;
+    width: 40%;
+    background: var(--background-bottom);
+    border-radius: 1vw;
+    box-shadow: 0 15px 30px #687172, 0 5px 15px #687172;
+}
+
+#close-disclaimer {
+    color: #687172;
+    width: 15%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border-radius: 1vw;
+    box-shadow: 0 10px 30px #687172, 0 5px 15px #687172;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    background: var(--background-top);
+
+    transition: 0.35s ease-in-out;
+    &:hover {
+        outline: 2px solid #222222;
+        cursor: pointer;
+        transform: scale(1.01) translateY(-5px);
+    }
+
+    &:active {
+        outline: 2px solid #222222;
+        cursor: pointer;
+        transform: scale(0.99) translateY(-3px);
+    }
+
+}
+
+#disclaimer-top {
+    background: var(--background-top);
+    width: 100%;
+    height: 15%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #687172;
+}
+
+#disclaimer-bottom {
+    background: none;
+    height: 90%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#general {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 25%;
+    height: max-content;
+    max-height: 50%;
+    background: none;
+    padding: 2%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    color: #687172;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#privacy {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 25%;
+    height: max-content;
+    max-height: 50%;
+    background: none;
+    padding: 2%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    color: #687172;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#security {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 25%;
+    height: max-content;
+    max-height: 50%;
+    background: none;
+    padding: 2%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    color: #687172;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#terms {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 25%;
+    height: max-content;
+    max-height: 50%;
+    background: none;
+    padding: 2%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    color: #687172;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #687172;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4f52;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #687172 transparent;
 }

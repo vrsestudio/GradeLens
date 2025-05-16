@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../style/authentication.css">
     <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" href="../style/signup.css">
-    <script src="../scipt/dynamicauth.js" defer></script>
-    <script src="../scipt/disclaimer.js" defer></script>
+    <script src="../script/dynamicauth.js" defer></script>
+    <script src="../script/disclaimer.js" defer></script>
 </head>
 <body id="authbody">
 
