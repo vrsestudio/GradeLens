@@ -88,6 +88,8 @@
     width: 100%;
     height: 20%;
     min-height: 20%;
+    border-radius: 1vw;
+    box-shadow: 0 2.5px 15px rgba(0, 0, 0, 0.2), 0 2.5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #authnavi {
@@ -241,7 +243,7 @@
 }
 
 #bottom {
-    background-color: var(--background-bottom);
+    background-color: none;
     width: 100%;
     height: 100%;
     border-bottom-right-radius: 1vw;
