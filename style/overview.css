@@ -36,7 +36,7 @@
 
 #dynamiccontentpane {
     display: flex;
-    background: var(--background-bottom);
+    background: none;
     height: 87.5%;
     width: 100%;
     border-bottom-right-radius: 1vw;

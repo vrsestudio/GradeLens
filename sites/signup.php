@@ -71,7 +71,6 @@
 
             if ($check_stmt->num_rows > 0) {
                 // Output if email already exists
-                echo "<p>Email is already registered!</p>";
             } else {
                 // Prepare SQL statement to insert new user
                 $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");

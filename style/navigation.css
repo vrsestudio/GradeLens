@@ -1,3 +1,8 @@
+:root {
+    --background-top: #ced8e0;
+    --background-bottom: #e2e5ed;
+}
+
 #navilogo {
     display: flex;
     width: 6%;
@@ -26,40 +31,170 @@
     flex-direction: row;
     width: 94%;
     height: 100%;
-    background: red;
+    background: none;
 }
 
 #homebutton {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.75%;
+    margin-left: auto;
     display: flex;
-    width: 33.33%;
-    height: 100%;
-    background: blue;
+    min-width: 15%;
+    width: max-content;
+    height: 80%;
+    background: none;
+    border: none;
+    border-radius: 1vw;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+
+    transition: 0.35s ease-in-out, color 0.25s ease-in-out;
+    &:hover {
+        border: 2px solid #687172;
+        text-underline-offset: 10%;
+        transform: translateY(-5px);
+        cursor: pointer;
+        color: #687172;
+    }
+
+    &:active {
+        border: 2px solid #687172;
+        text-decoration: underline;
+        transform: translateY(2px) scale(0.99);
+        cursor: pointer;
+        color: #687172;
+        text-underline-offset: 5%;
+    }
+    backface-visibility: hidden;
 }
 
 #librarybutton {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.75%;
     display: flex;
-    width: 33.33%;
-    height: 100%;
-    background: green;
+    min-width: 15%;
+    width: max-content;
+    height: 80%;
+    background: none;
+    border: none;
+    border-radius: 1vw;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+
+    transition: 0.35s ease-in-out, color 0.25s ease-in-out;
+    &:hover {
+        border: 2px solid #687172;
+        text-underline-offset: 10%;
+        transform: translateY(-5px);
+        cursor: pointer;
+        color: #687172;
+    }
+
+    &:active {
+        border: 2px solid #687172;
+        text-decoration: underline;
+        transform: translateY(2px) scale(0.99);
+        cursor: pointer;
+        color: #687172;
+        text-underline-offset: 5%;
+    }
+    backface-visibility: hidden;
 }
 
 #createbutton {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.75%;
     display: flex;
-    width: 33.33%;
-    height: 100%;
-    background: yellow;
+    min-width: 15%;
+    width: max-content;
+    height: 80%;
+    background: none;
+    border: none;
+    border-radius: 1vw;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+
+    transition: 0.35s ease-in-out, color 0.25s ease-in-out;
+    &:hover {
+        border: 2px solid #687172;
+        text-underline-offset: 10%;
+        transform: translateY(-5px);
+        cursor: pointer;
+        color: #687172;
+    }
+
+    &:active {
+        border: 2px solid #687172;
+        text-decoration: underline;
+        transform: translateY(2px) scale(0.99);
+        cursor: pointer;
+        color: #687172;
+        text-underline-offset: 5%;
+    }
+    backface-visibility: hidden;
 }
 
+#profilebutton {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.75%;
+    display: flex;
+    width: 5.5%;
+    height: 80%;
+    background: none;
+    border: none;
+    border-radius: 1vw;
 
+    align-items: center;
+    justify-content: center;
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
 
+    transition: 0.35s ease-in-out, color 0.25s ease-in-out;
+    &:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        opacity: 60%;
+    }
 
+    &:active {
+        transform: translateY(2px) scale(0.99);
+        cursor: pointer;
+    }
+    backface-visibility: hidden;
+}
 
+#profilebutton-image {
+    height: 6.5vh;
+    width: 3vw;
+}
 
-
-
-
-
+.active-button {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 15%;
+    cursor: pointer;
+}
 
 @keyframes spin {
     from {

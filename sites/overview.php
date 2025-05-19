@@ -12,7 +12,7 @@
             <?php include './invoke/navigation.php'; ?>
         </section>
         <section id="dynamiccontentpane">
-            Dynamic Content Pane
+            <script src="../script/dynamicnavigation.js"></script>
         </section>
     </section>
 </body>

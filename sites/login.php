@@ -86,10 +86,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: overview.php");
             exit();
         } else {
-            echo "<p>Invalid password!</p>";
+            // invalid password
         }
     } else {
-        echo "<p>Email not found!</p>";
+        //email not found
     }
 
     $stmt->close();
