@@ -11,8 +11,7 @@
     left: 0;
     height: 110%;
     width: 100%;
-    background: black;
-    opacity: 75%;
+    background: none;
     overflow: hidden;
 }
 
@@ -35,7 +34,13 @@
     width: 40%;
     background: var(--background-bottom);
     border-radius: 1vw;
-    box-shadow: 0 15px 30px #687172, 0 5px 15px #687172;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    &:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    backface-visibility: hidden;
 }
 
 #close-disclaimer {
@@ -46,23 +51,25 @@
     margin-right: auto;
     margin-bottom: 5%;
     border-radius: 1vw;
-    box-shadow: 0 10px 30px #687172, 0 5px 15px #687172;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 100%;
+    font-size: 2vh;
     background: var(--background-top);
 
     transition: 0.35s ease-in-out;
     &:hover {
-        outline: 2px solid #222222;
+        outline: 2px solid #687172;
         cursor: pointer;
         transform: scale(1.01) translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     &:active {
-        outline: 2px solid #222222;
+        outline: 2px solid #687172;
         cursor: pointer;
         transform: scale(0.99) translateY(-3px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
 }
@@ -78,7 +85,7 @@
     align-items: center;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2em;
+    font-size: 5vh;
     font-weight: bold;
     color: #687172;
 }
@@ -107,6 +114,7 @@
 
     color: #687172;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vh;
 }
 
 #privacy {
@@ -125,6 +133,7 @@
 
     color: #687172;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vh;
 }
 
 #security {
@@ -143,6 +152,7 @@
 
     color: #687172;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vh;
 }
 
 #terms {
@@ -161,6 +171,7 @@
 
     color: #687172;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vh;
 }
 
 ::-webkit-scrollbar {
