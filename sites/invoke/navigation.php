@@ -1,3 +1,4 @@
+<script src="../script/profile.js" defer></script>
 <link rel="stylesheet" href="../style/navigation.css">
 <section id="navilogo">
     <img id="navilogo-image" src="../source/project/logo_gradelens_dark_transparent.webp">
