@@ -2,6 +2,256 @@
     --submitbutton: #ced8e0;
 }
 
+:root {
+    --submitbutton: #ced8e0;
+    --background-top: #ced8e0;
+    --background-bottom: #e2e5ed;
+    --opacity-top: 100%;
+    --opacity-bottom: 100%;
+    --global-border-radius: 1vw;
+}
+
+#authbody {
+    display: flex;
+    background-image: url("../source/background/default_background_light.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: calc(100vh);
+    overflow: hidden;
+}
+
+#authdisclaimer {
+    border: none;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    border-radius: 2vw;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+
+    background-color: var(--background-top);
+    color: #333333;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: x-large;
+    font-weight: bold;
+
+    overflow: hidden;
+
+    transition: 0.35s ease-in-out, border-color 0s ease-in-out, translate 0.2s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #afb6bd;
+        transform: scale(1.1) translateY(-2px);
+    }
+
+    &:active {
+        cursor: pointer;
+        transform: scale(0.9) translateY(-1px);
+    }
+    backface-visibility: hidden;
+}
+
+#authcontainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background-bottom);
+    border-radius: 1vw;
+
+    width: 30%;
+    height: 50%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    &:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    backface-visibility: hidden;
+}
+
+#authtop {
+    display: flex;
+    background: none;
+    width: 100%;
+    height: 20%;
+    min-height: 20%;
+}
+
+#authnavi {
+    display: flex;
+    background-color: var(--background-top);
+    opacity: var(--opacity-top);
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    width: calc(100% - 20%);
+    height: 100%;
+}
+
+.active-button {
+    text-decoration: underline;
+    text-underline-offset: 25%;
+}
+
+#loginbutton {
+    display: flex;
+    background: none;
+    border: none;
+    width: max-content;
+    min-width: 30%;
+    max-width: 45.5%;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow-y: hidden;
+    overflow-x: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: 0.35s ease-in-out, transform 0.2s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        color: #687172;
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        cursor: pointer;
+        transform: translateY(0px);
+    }
+    backface-visibility: hidden;
+}
+
+#buttonseperator {
+    display: flex;
+    background: none;
+    width: max-content;
+    max-width: 10%;
+    min-width: 2.5%;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#signupbutton {
+    display: flex;
+    background: none;
+    border: none;
+    width: max-content;
+    min-width: 30%;
+    max-width: 45.5%;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1%;
+
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    text-decoration: underline;
+    text-underline-offset: 25%;
+
+    transition: 0.35s ease-in-out, transform 0.2s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        color: #687172;
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        cursor: pointer;
+        transform: translateY(0px);
+    }
+    backface-visibility: hidden;
+}
+
+#authlogocontainer {
+    display: flex;
+    background-color: var(--background-top);
+    opacity: var(--opacity-bottom);
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    width: 20%;
+    height: 100%;
+}
+
+#authlogo {
+    display: flex;
+    height: 80%;
+    width: 65%;
+    image-rendering: optimizeSpeed;
+    margin: auto;
+    aspect-ratio: 1/1;
+
+    transition: 1s ease;
+    backface-visibility: hidden;
+
+    &:hover {
+        animation: spin 1.5s linear infinite;
+    }
+    &:active {
+        animation: spinbackwards 1.5s linear infinite;
+    }
+    backface-visibility: hidden;
+}
+
+#bottom {
+    background-color: var(--background-bottom);
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
 #signupbody {
     display: flex;
     flex-direction: column;
@@ -141,4 +391,480 @@
         outline: 2px solid #a3aab5;
         transform: scale(0.99);
     }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(35deg);
+    }
+    to {
+        transform: rotate(40deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(50deg);
+    }
+    to {
+        transform: rotate(55deg);
+    }
+    to {
+        transform: rotate(60deg);
+    }
+    to {
+        transform: rotate(65deg);
+    }
+    to {
+        transform: rotate(70deg);
+    }
+    to {
+        transform: rotate(75deg);
+    }
+    to {
+        transform: rotate(80deg);
+    }
+    to {
+        transform: rotate(85deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(95deg);
+    }
+    to {
+        transform: rotate(100deg);
+    }
+    to {
+        transform: rotate(105deg);
+    }
+    to {
+        transform: rotate(110deg);
+    }
+    to {
+        transform: rotate(115deg);
+    }
+    to {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(125deg);
+    }
+    to {
+        transform: rotate(130deg);
+    }
+    to {
+        transform: rotate(135deg);
+    }
+    to {
+        transform: rotate(140deg);
+    }
+    to {
+        transform: rotate(145deg);
+    }
+    to {
+        transform: rotate(150deg);
+    }
+    to {
+        transform: rotate(155deg);
+    }
+    to {
+        transform: rotate(160deg);
+    }
+    to {
+        transform: rotate(165deg);
+    }
+    to {
+        transform: rotate(170deg);
+    }
+    to {
+        transform: rotate(175deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(185deg);
+    }
+    to {
+        transform: rotate(190deg);
+    }
+    to {
+        transform: rotate(195deg);
+    }
+    to {
+        transform: rotate(200deg);
+    }
+    to {
+        transform: rotate(205deg);
+    }
+    to {
+        transform: rotate(210deg);
+    }
+    to {
+        transform: rotate(215deg);
+    }
+    to {
+        transform: rotate(220deg);
+    }
+    to {
+        transform: rotate(225deg);
+    }
+    to {
+        transform: rotate(230deg);
+    }
+    to {
+        transform: rotate(235deg);
+    }
+    to {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(245deg);
+    }
+    to {
+        transform: rotate(250deg);
+    }
+    to {
+        transform: rotate(255deg);
+    }
+    to {
+        transform: rotate(260deg);
+    }
+    to {
+        transform: rotate(265deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(275deg);
+    }
+    to {
+        transform: rotate(280deg);
+    }
+    to {
+        transform: rotate(285deg);
+    }
+    to {
+        transform: rotate(290deg);
+    }
+    to {
+        transform: rotate(295deg);
+    }
+    to {
+        transform: rotate(300deg);
+    }
+    to {
+        transform: rotate(305deg);
+    }
+    to {
+        transform: rotate(310deg);
+    }
+    to {
+        transform: rotate(315deg);
+    }
+    to {
+        transform: rotate(320deg);
+    }
+    to {
+        transform: rotate(325deg);
+    }
+    to {
+        transform: rotate(330deg);
+    }
+    to {
+        transform: rotate(335deg);
+    }
+    to {
+        transform: rotate(340deg);
+    }
+    to {
+        transform: rotate(345deg);
+    }
+    to {
+        transform: rotate(350deg);
+    }
+    to {
+        transform: rotate(355deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinbackwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(-25deg);
+    }
+    to {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(-35deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(-55deg);
+    }
+    to {
+        transform: rotate(-60deg);
+    }
+    to {
+        transform: rotate(-65deg);
+    }
+    to {
+        transform: rotate(-70deg);
+    }
+    to {
+        transform: rotate(-75deg);
+    }
+    to {
+        transform: rotate(-80deg);
+    }
+    to {
+        transform: rotate(-85deg);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(-95deg);
+    }
+    to {
+        transform: rotate(-100deg);
+    }
+    to {
+        transform: rotate(-105deg);
+    }
+    to {
+        transform: rotate(-110deg);
+    }
+    to {
+        transform: rotate(-115deg);
+    }
+    to {
+        transform: rotate(-120deg);
+    }
+    to {
+        transform: rotate(-125deg);
+    }
+    to {
+        transform: rotate(-130deg);
+    }
+    to {
+        transform: rotate(-135deg);
+    }
+    to {
+        transform: rotate(-140deg);
+    }
+    to {
+        transform: rotate(-145deg);
+    }
+    to {
+        transform: rotate(-150deg);
+    }
+    to {
+        transform: rotate(-155deg);
+    }
+    to {
+        transform: rotate(-160deg);
+    }
+    to {
+        transform: rotate(-165deg);
+    }
+    to {
+        transform: rotate(-170deg);
+    }
+    to {
+        transform: rotate(-175deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(-185deg);
+    }
+    to {
+        transform: rotate(-190deg);
+    }
+    to {
+        transform: rotate(-195deg);
+    }
+    to {
+        transform: rotate(-200deg);
+    }
+    to {
+        transform: rotate(-205deg);
+    }
+    to {
+        transform: rotate(-210deg);
+    }
+    to {
+        transform: rotate(-215deg);
+    }
+    to {
+        transform: rotate(-220deg);
+    }
+    to {
+        transform: rotate(-225deg);
+    }
+    to {
+        transform: rotate(-230deg);
+    }
+    to {
+        transform: rotate(-235deg);
+    }
+    to {
+        transform: rotate(-240deg);
+    }
+    to {
+        transform: rotate(-245deg);
+    }
+    to {
+        transform: rotate(-250deg);
+    }
+    to {
+        transform: rotate(-255deg);
+    }
+    to {
+        transform: rotate(-260deg);
+    }
+    to {
+        transform: rotate(-265deg);
+    }
+    to {
+        transform: rotate(-270deg);
+    }
+    to {
+        transform: rotate(-275deg);
+    }
+    to {
+        transform: rotate(-280deg);
+    }
+    to {
+        transform: rotate(-285deg);
+    }
+    to {
+        transform: rotate(-290deg);
+    }
+    to {
+        transform: rotate(-295deg);
+    }
+    to {
+        transform: rotate(-300deg);
+    }
+    to {
+        transform: rotate(-305deg);
+    }
+    to {
+        transform: rotate(-310deg);
+    }
+    to {
+        transform: rotate(-315deg);
+    }
+    to {
+        transform: rotate(-320deg);
+    }
+    to {
+        transform: rotate(-325deg);
+    }
+    to {
+        transform: rotate(-330deg);
+    }
+    to {
+        transform: rotate(-335deg);
+    }
+    to {
+        transform: rotate(-340deg);
+    }
+    to {
+        transform: rotate(-345deg);
+    }
+    to {
+        transform: rotate(-350deg);
+    }
+    to {
+        transform: rotate(-355deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #687172;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4f52;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #687172 transparent;
 }
