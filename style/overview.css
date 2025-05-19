@@ -1,0 +1,44 @@
+:root {
+    --background-top: #ced8e0;
+    --background-bottom: #e2e5ed;
+}
+
+#overviewbackground {
+    display: flex;
+    background-image: url("../source/background/default_background_light.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+
+    height: 96vh;
+    width: 100vw;
+}
+
+#overviewmaincontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-bottom);
+    height: 100%;
+    width: 100%;
+    margin: 1%;
+    border-radius: 1vw;
+}
+
+#naviagtioncontainer {
+    display: flex;
+    background: var(--background-top);
+    height: 12.5%;
+    width: 100%;
+    border-radius: 1vw;
+}
+
+#dynamiccontentpane {
+    display: flex;
+    background: var(--background-bottom);
+    height: 87.5%;
+    width: 100%;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}

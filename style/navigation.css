@@ -1,0 +1,506 @@
+#navilogo {
+    display: flex;
+    width: 6%;
+    height: 100%;
+}
+
+#navilogo-image {
+    display: flex;
+    margin: auto;
+    width: 85%;
+    height: 90%;
+    aspect-ratio: 1 / 1;
+
+    transition: 1s ease-in-out;
+    &:hover {
+        animation: spin 1.5s linear infinite;
+    }
+    &:active {
+        animation: spinbackwards 1.5s linear infinite;
+    }
+    backface-visibility: hidden;
+}
+
+#navibuttons {
+    display: flex;
+    flex-direction: row;
+    width: 94%;
+    height: 100%;
+    background: red;
+}
+
+#homebutton {
+    display: flex;
+    width: 33.33%;
+    height: 100%;
+    background: blue;
+}
+
+#librarybutton {
+    display: flex;
+    width: 33.33%;
+    height: 100%;
+    background: green;
+}
+
+#createbutton {
+    display: flex;
+    width: 33.33%;
+    height: 100%;
+    background: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(35deg);
+    }
+    to {
+        transform: rotate(40deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(50deg);
+    }
+    to {
+        transform: rotate(55deg);
+    }
+    to {
+        transform: rotate(60deg);
+    }
+    to {
+        transform: rotate(65deg);
+    }
+    to {
+        transform: rotate(70deg);
+    }
+    to {
+        transform: rotate(75deg);
+    }
+    to {
+        transform: rotate(80deg);
+    }
+    to {
+        transform: rotate(85deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(95deg);
+    }
+    to {
+        transform: rotate(100deg);
+    }
+    to {
+        transform: rotate(105deg);
+    }
+    to {
+        transform: rotate(110deg);
+    }
+    to {
+        transform: rotate(115deg);
+    }
+    to {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(125deg);
+    }
+    to {
+        transform: rotate(130deg);
+    }
+    to {
+        transform: rotate(135deg);
+    }
+    to {
+        transform: rotate(140deg);
+    }
+    to {
+        transform: rotate(145deg);
+    }
+    to {
+        transform: rotate(150deg);
+    }
+    to {
+        transform: rotate(155deg);
+    }
+    to {
+        transform: rotate(160deg);
+    }
+    to {
+        transform: rotate(165deg);
+    }
+    to {
+        transform: rotate(170deg);
+    }
+    to {
+        transform: rotate(175deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(185deg);
+    }
+    to {
+        transform: rotate(190deg);
+    }
+    to {
+        transform: rotate(195deg);
+    }
+    to {
+        transform: rotate(200deg);
+    }
+    to {
+        transform: rotate(205deg);
+    }
+    to {
+        transform: rotate(210deg);
+    }
+    to {
+        transform: rotate(215deg);
+    }
+    to {
+        transform: rotate(220deg);
+    }
+    to {
+        transform: rotate(225deg);
+    }
+    to {
+        transform: rotate(230deg);
+    }
+    to {
+        transform: rotate(235deg);
+    }
+    to {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(245deg);
+    }
+    to {
+        transform: rotate(250deg);
+    }
+    to {
+        transform: rotate(255deg);
+    }
+    to {
+        transform: rotate(260deg);
+    }
+    to {
+        transform: rotate(265deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(275deg);
+    }
+    to {
+        transform: rotate(280deg);
+    }
+    to {
+        transform: rotate(285deg);
+    }
+    to {
+        transform: rotate(290deg);
+    }
+    to {
+        transform: rotate(295deg);
+    }
+    to {
+        transform: rotate(300deg);
+    }
+    to {
+        transform: rotate(305deg);
+    }
+    to {
+        transform: rotate(310deg);
+    }
+    to {
+        transform: rotate(315deg);
+    }
+    to {
+        transform: rotate(320deg);
+    }
+    to {
+        transform: rotate(325deg);
+    }
+    to {
+        transform: rotate(330deg);
+    }
+    to {
+        transform: rotate(335deg);
+    }
+    to {
+        transform: rotate(340deg);
+    }
+    to {
+        transform: rotate(345deg);
+    }
+    to {
+        transform: rotate(350deg);
+    }
+    to {
+        transform: rotate(355deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinbackwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(-25deg);
+    }
+    to {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(-35deg);
+    }
+    to {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(-55deg);
+    }
+    to {
+        transform: rotate(-60deg);
+    }
+    to {
+        transform: rotate(-65deg);
+    }
+    to {
+        transform: rotate(-70deg);
+    }
+    to {
+        transform: rotate(-75deg);
+    }
+    to {
+        transform: rotate(-80deg);
+    }
+    to {
+        transform: rotate(-85deg);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(-95deg);
+    }
+    to {
+        transform: rotate(-100deg);
+    }
+    to {
+        transform: rotate(-105deg);
+    }
+    to {
+        transform: rotate(-110deg);
+    }
+    to {
+        transform: rotate(-115deg);
+    }
+    to {
+        transform: rotate(-120deg);
+    }
+    to {
+        transform: rotate(-125deg);
+    }
+    to {
+        transform: rotate(-130deg);
+    }
+    to {
+        transform: rotate(-135deg);
+    }
+    to {
+        transform: rotate(-140deg);
+    }
+    to {
+        transform: rotate(-145deg);
+    }
+    to {
+        transform: rotate(-150deg);
+    }
+    to {
+        transform: rotate(-155deg);
+    }
+    to {
+        transform: rotate(-160deg);
+    }
+    to {
+        transform: rotate(-165deg);
+    }
+    to {
+        transform: rotate(-170deg);
+    }
+    to {
+        transform: rotate(-175deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(-185deg);
+    }
+    to {
+        transform: rotate(-190deg);
+    }
+    to {
+        transform: rotate(-195deg);
+    }
+    to {
+        transform: rotate(-200deg);
+    }
+    to {
+        transform: rotate(-205deg);
+    }
+    to {
+        transform: rotate(-210deg);
+    }
+    to {
+        transform: rotate(-215deg);
+    }
+    to {
+        transform: rotate(-220deg);
+    }
+    to {
+        transform: rotate(-225deg);
+    }
+    to {
+        transform: rotate(-230deg);
+    }
+    to {
+        transform: rotate(-235deg);
+    }
+    to {
+        transform: rotate(-240deg);
+    }
+    to {
+        transform: rotate(-245deg);
+    }
+    to {
+        transform: rotate(-250deg);
+    }
+    to {
+        transform: rotate(-255deg);
+    }
+    to {
+        transform: rotate(-260deg);
+    }
+    to {
+        transform: rotate(-265deg);
+    }
+    to {
+        transform: rotate(-270deg);
+    }
+    to {
+        transform: rotate(-275deg);
+    }
+    to {
+        transform: rotate(-280deg);
+    }
+    to {
+        transform: rotate(-285deg);
+    }
+    to {
+        transform: rotate(-290deg);
+    }
+    to {
+        transform: rotate(-295deg);
+    }
+    to {
+        transform: rotate(-300deg);
+    }
+    to {
+        transform: rotate(-305deg);
+    }
+    to {
+        transform: rotate(-310deg);
+    }
+    to {
+        transform: rotate(-315deg);
+    }
+    to {
+        transform: rotate(-320deg);
+    }
+    to {
+        transform: rotate(-325deg);
+    }
+    to {
+        transform: rotate(-330deg);
+    }
+    to {
+        transform: rotate(-335deg);
+    }
+    to {
+        transform: rotate(-340deg);
+    }
+    to {
+        transform: rotate(-345deg);
+    }
+    to {
+        transform: rotate(-350deg);
+    }
+    to {
+        transform: rotate(-355deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
