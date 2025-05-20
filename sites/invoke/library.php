@@ -2,16 +2,12 @@ LIBRARY VIEW PANEL <br>
 <?php
 session_start();
 
-$mysqli = new mysqli("localhost", "root", "", "gradelens");
-if ($mysqli->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
-    die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
-}
+include '../../api/connectdatabase.php';
 
 $uID = $_SESSION['uID'] ?? null;
 
 if ($uID && is_numeric($uID)) {
-    $stmt = $mysqli->prepare("SELECT * FROM users WHERE uID = ?");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE uID = ?");
     $stmt->bind_param("i", $uID);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -30,5 +26,5 @@ if ($uID && is_numeric($uID)) {
     echo "Nicht eingeloggt oder ungültige uID.";
 }
 
-$mysqli->close();
+include '../../api/disconnectdatabase.php';
 ?>

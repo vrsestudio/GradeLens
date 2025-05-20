@@ -3,6 +3,15 @@
     --background-bottom: #e2e5ed;
 }
 
+#naviagtioncontainer {
+    display: flex;
+    background: var(--background-top);
+    height: 12.5%;
+    width: 100%;
+    border-radius: 1vw;
+    box-shadow: 0 2.5px 15px rgba(0, 0, 0, 0.2), 0 2.5px 15px rgba(0, 0, 0, 0.1);
+}
+
 #navilogo {
     display: flex;
     width: 6%;

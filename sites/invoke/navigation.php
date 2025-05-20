@@ -1,11 +1,13 @@
-<script src="../script/profile.js" defer></script>
-<link rel="stylesheet" href="../style/navigation.css">
+<script src="/gradelens/script/profile.js" defer></script>
+<link rel="stylesheet" href="/gradelens/style/navigation.css">
+<section id="naviagtioncontainer">
 <section id="navilogo">
-    <img id="navilogo-image" src="../source/project/logo_gradelens_dark_transparent.webp">
+    <img id="navilogo-image" src="/gradelens/source/project/logo_gradelens_dark_transparent.webp">
 </section>
 <section id="navibuttons">
     <button id="homebutton">HOME</button>
     <button id="librarybutton">LIBRARY</button>
     <button id="createbutton">ADD</button>
-    <button id="profilebutton"><img id="profilebutton-image" src="../source/buttons/profile_button_dark.webp"></button>
+    <button id="profilebutton"><img id="profilebutton-image" src="/GradeLens/source/buttons/profile_button_dark.webp" onclick="/GradeLens/api/loadlogin.php"></button>
+</section>
 </section>

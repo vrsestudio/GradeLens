@@ -1,9 +1,4 @@
-:root {
-    --background-top: #ced8e0;
-    --background-bottom: #e2e5ed;
-}
-
-#overviewbackground {
+#subjectbackground {
     display: flex;
     background-image: url("/gradelens/source/background/default_background_light.webp");
     background-repeat: no-repeat;
@@ -16,7 +11,7 @@
     width: 100vw;
 }
 
-#overviewmaincontainer {
+#subjectmaincontainer {
     display: flex;
     flex-direction: column;
     background-color: var(--background-bottom);
@@ -27,16 +22,13 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#dynamiccontentpane {
+#subjectcreationcontainer {
     display: flex;
-    background: none;
+    background: orangered;
     height: 87.5%;
     width: 100%;
     border-bottom-right-radius: 1vw;
     border-bottom-left-radius: 1vw;
-}
-
-#timomsg {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

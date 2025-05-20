@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  background-image: url("../source/background/default_background_light.webp");
+  background-image: url("/gradelens/source/background/default_background_light.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
