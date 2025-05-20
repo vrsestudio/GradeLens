@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-echo "LIBRARY VIEW PANEL <br>";
+echo "DEFAULT VIEW PANEL <br>";
 
 $mysqli = new mysqli("localhost", "root", "", "gradelens");
 if ($mysqli->connect_error) {
@@ -11,11 +11,6 @@ if ($mysqli->connect_error) {
 $uID = $_SESSION['uID'] ?? null;
 
 if ($uID && is_numeric($uID)) {
-    if ($uID == 1) {
-        echo '<img src=https://spielwaren-investor.com/wp-content/uploads/2020/02/star-wars-yoda.jpg>';
-    } elseif ($uID == 2) {
-            echo '<img src=https://upload.wikimedia.org/wikipedia/commons/9/9c/Darth_Vader_-_2007_Disney_Weekends.jpg>';
-    } else {
         $stmt = $mysqli->prepare("SELECT * FROM users WHERE uID = ?");
         $stmt->bind_param("i", $uID);
         $stmt->execute();
@@ -31,7 +26,6 @@ if ($uID && is_numeric($uID)) {
             echo "Keine Einträge gefunden.";
         }
         $stmt->close();
-    }
 } else {
     echo "Nicht eingeloggt oder ungültige uID.";
 }
