@@ -9,6 +9,7 @@ We do not use any third-party services that collect personal information. We do 
 - User's given password
 
 Note: We do store the users password and IP-Address in a hashed and enrypted format. We do not store the password in plain text. The password is used to authenticate the user and is not shared with any third-party services.
+Your IP Address is collected every time you log in to your account. The old value gets overwritten. The first time you log in, the IP Address is stored in the database and will be kept there until manual deletion.
 
 ## Cookies
 Cookies are files with small amounts of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the website you visit and are stored on your device's hard drive.
