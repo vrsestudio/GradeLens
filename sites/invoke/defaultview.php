@@ -3,7 +3,7 @@ session_start();
 
 echo "DEFAULT VIEW PANEL <br>";
 
-$mysqli = new mysqli("localhost", "root", "", "gradelens");
+$mysqli = new mysqli("127.0.0.1", "gradelens", ")7a3ogunKqsdM8[q", "gradelens");
 if ($mysqli->connect_error) {
     die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
 }
@@ -31,4 +31,3 @@ if ($uID && is_numeric($uID)) {
 }
 
 $mysqli->close();
-?>
