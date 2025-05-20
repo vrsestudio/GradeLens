@@ -19,4 +19,3 @@ if (ini_get("session.use_cookies")) {
 // Session zerstören
 session_destroy();
 ?>
-<meta http-equiv="refresh" content="0; url=../sites/login.php">

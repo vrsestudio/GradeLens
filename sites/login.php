@@ -46,6 +46,7 @@
 </html>
 
 <?php
+include '../api/endsession.php';
 $hostname = "localhost";
 $username = "root";
 $password = "";

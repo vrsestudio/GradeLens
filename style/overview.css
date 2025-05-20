@@ -24,6 +24,7 @@
     width: 100%;
     margin: 1%;
     border-radius: 1vw;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #naviagtioncontainer {
@@ -32,6 +33,7 @@
     height: 12.5%;
     width: 100%;
     border-radius: 1vw;
+    box-shadow: 0 2.5px 15px rgba(0, 0, 0, 0.2), 0 2.5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #dynamiccontentpane {
@@ -41,4 +43,9 @@
     width: 100%;
     border-bottom-right-radius: 1vw;
     border-bottom-left-radius: 1vw;
+}
+
+#timomsg {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5vw;
 }

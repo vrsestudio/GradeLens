@@ -313,7 +313,7 @@
     height: 50%;
     margin: auto;
     border-radius: 1vw;
-    border: 2px solid #ced8e0;
+    border: 0.15vw solid #ced8e0;
     padding: 1%;
     outline: none;
 
@@ -321,17 +321,17 @@
 
     transition: 0.35s ease-in-out;
     &:hover {
-        transform: translateY(-5px) scale(1.01);
+        transform: translateY(-10%) scale(1.01);
     }
 
     &:active {
-        outline: 2px solid #9ca1ac;
+        outline: 0.17vw solid #9ca1ac;
     }
 
     &:focus {
         transition: 0.5s ease-in-out;
-        outline: 2px solid #9ca1ac;
-        transform: translateY(-5px) scale(0.99);
+        outline: 0.17vw solid #9ca1ac;
+        transform: translateY(-5%) scale(0.99);
     }
 }
 
@@ -341,7 +341,7 @@
     height: 50%;
     margin: auto;
     border-radius: 1vw;
-    border: 2px solid #ced8e0;
+    border: 0.15vw solid #ced8e0;
     padding: 1%;
     outline: none;
 
@@ -349,17 +349,17 @@
 
     transition: 0.35s ease-in-out;
     &:hover {
-        transform: translateY(-5px) scale(1.01);
+        transform: translateY(-10%) scale(1.01);
     }
 
     &:active {
-        outline: 2px solid #9ca1ac;
+        outline: 0.17vw solid #9ca1ac;
     }
 
     &:focus {
         transition: 0.5s ease-in-out;
-        outline: 2px solid #9ca1ac;
-        transform: translateY(-5px) scale(0.99);
+        outline: 0.17vw solid #9ca1ac;
+        transform: translateY(-5%) scale(0.99);
     }
 }
 
@@ -380,9 +380,9 @@
     width: 90%;
     background: var(--submitbutton);
     margin: auto;
-    border: 1px solid #bac2cc;
+    border: 0.15vw solid #bac2cc;
     outline-color: #a3aab5;
-    outline-width: 2px;
+    outline-width: 0.15vw;
 
     border-radius: 1vw;
     align-items: center;
@@ -392,12 +392,12 @@
 
     transition: 0.35s ease-in-out;
     &:hover {
-        outline: 2px solid #a9b0ba;
-        transform: scale(1.01) translateY(-2px);
+        outline: 0.17vw solid #a9b0ba;
+        transform: scale(1.01) translateY(-10%);
     }
 
     &:active {
-        outline: 2px solid #a3aab5;
+        outline: 0.17vw solid #a3aab5;
         transform: scale(0.99);
     }
 }
