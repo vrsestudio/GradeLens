@@ -11,3 +11,12 @@
     <button id="profilebutton"><img id="profilebutton-image" src="/GradeLens/source/buttons/profile_button_dark.webp" onclick="/GradeLens/api/loadlogin.php"></button>
 </section>
 </section>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if (!isset($_SESSION['uID'])) {
+    header("Location: /GradeLens/sites/login.php");
+    exit();
+}
+?>
