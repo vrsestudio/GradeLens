@@ -136,7 +136,46 @@
     }
 }
 
-#selectdiscriptioncontainer {
+#selectname {
+    min-height: 50%;
+    height: fit-content;
+    max-height: 60%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 97.5%;
+    color: black;
+    background: white;
+    border-radius: 1vw;
+    padding-left: 0.5%;
+    border: 0.15vw solid #ced8e0;
+    outline-color: #9ca1ac;
+    outline: none;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9vw;
+
+    transition: 0.35s ease-in-out;
+    &:hover {
+        transform: translateY(-7.5%) scale(1.005);
+    }
+
+    &:active {
+        outline: 0.17vw solid #9ca1ac;
+    }
+
+    &:focus {
+        transition: 0.5s ease-in-out;
+        outline: 0.17vw solid #9ca1ac;
+        transform: translateY(-2.75%) scale(1.005);
+    }
+}
+
+#selectdescriptioncontainer {
     display: flex;
     flex-direction: column;
     background: none;
@@ -145,7 +184,7 @@
     margin-bottom: 0.5%;
 }
 
-#selectdiscriptiontitle {
+#selectdescriptiontitle {
     margin: 0;
     height: 10%;
     width: 99%;
@@ -163,7 +202,7 @@
     font-size: 1vw;
 }
 
-#selectdiscription {
+#selectdescription {
     min-height: 50%;
     height: fit-content;
     max-height: 125%;

@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="0; url=../sites/login.php">
+<meta http-equiv="refresh" content="0; url=/GradeLens/sites/login.php">
