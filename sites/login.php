@@ -90,10 +90,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: /GradeLens/sites/overview.php"); // Absolute URL verwenden
             exit();
         } else {
-            echo "<p style='color: red; text-align: center;'>Ungültiges Passwort.</p>";
+            include './errors/login_password.html';
         }
     } else {
-        echo "<p style='color: red; text-align: center;'>E-Mail nicht gefunden.</p>";
+        include './errors/login_email.html';
     }
 }
 

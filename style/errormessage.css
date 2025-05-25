@@ -22,7 +22,8 @@
     opacity: 100%;
     margin: auto;
     height: max-content;
-    width: 30%;
+    min-width: 30%;
+    width: max-content;
     background: var(--background-bottom);
     color: #687172;
     border-radius: 1vw;

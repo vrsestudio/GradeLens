@@ -51,79 +51,71 @@
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
 
-            // IP-Adresse des Benutzers abrufen
             $user_ip_address = $_SERVER['REMOTE_ADDR'] ?? null;
 
-            // E-Mail hashen
             $hashed_email = hash('sha256', $email);
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-            // Transaktion starten, um Konsistenz zu gewährleisten
             $conn->begin_transaction();
             $registration_successful = false;
 
             try {
-                // 1. Überprüfen, ob E-Mail bereits existiert
+
                 $check_stmt = $conn->prepare("SELECT uID FROM users WHERE email = ?");
                 $check_stmt->bind_param("s", $hashed_email);
                 $check_stmt->execute();
                 $check_stmt->store_result();
 
                 if ($check_stmt->num_rows > 0) {
-                    // E-Mail existiert bereits - Fehlerbehandlung hier (z.B. Nachricht anzeigen)
-                    echo "<p style='color: red; text-align: center;'>Diese E-Mail ist bereits registriert.</p>";
+
+                    include './errors/signup_email.html';
                     $check_stmt->close();
                     $conn->rollback();
                 } else {
                     $check_stmt->close();
 
-                    // 2. Neuen Benutzer einfügen
                     $stmt_user = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
                     $stmt_user->bind_param("ss", $hashed_email, $hashed_password);
 
                     if ($stmt_user->execute()) {
-                        $uID = $conn->insert_id; // Die automatisch generierte uID des neuen Benutzers
+                        $uID = $conn->insert_id;
 
-                        // 3. IP-Adresse in die authentication-Tabelle einfügen
                         $stmt_auth = $conn->prepare("INSERT INTO authentication (fkipa, lkipa) VALUES (?, ?)");
-                        $stmt_auth->bind_param("ss", $user_ip_address, $user_ip_address); // fkipa und lkipa sind zunächst gleich
+                        $stmt_auth->bind_param("ss", $user_ip_address, $user_ip_address);
 
                         if ($stmt_auth->execute()) {
-                            $aID = $conn->insert_id; // Die automatisch generierte aID des neuen Auth-Eintrags
+                            $aID = $conn->insert_id;
 
-                            // 4. Einträge in userauthentication-Tabelle verknüpfen
                             $stmt_user_auth = $conn->prepare("INSERT INTO userauthentication (uID, aID) VALUES (?, ?)");
                             $stmt_user_auth->bind_param("ii", $uID, $aID);
 
                             if ($stmt_user_auth->execute()) {
-                                $conn->commit(); // Alle Operationen erfolgreich, Transaktion abschließen
+                                $conn->commit();
                                 $registration_successful = true;
-                                // Session starten und uID speichern, dann weiterleiten
                                 if (session_status() === PHP_SESSION_NONE) {
                                     session_start();
                                 }
                                 $_SESSION['uID'] = $uID;
-                                header("Location: /GradeLens/sites/overview.php");
+                                include './success/signup_completed.html';
                                 exit();
                             } else {
-                                echo "<p style='color: red; text-align: center;'>Fehler beim Verknüpfen der Authentifizierungsdaten.</p>";
+                                include './errors/signup_authdata.html';
                                 $conn->rollback();
                             }
                             $stmt_user_auth->close();
                         } else {
-                            echo "<p style='color: red; text-align: center;'>Fehler beim Speichern der IP-Adresse.</p>";
+                            // Error inputting IP address
                             $conn->rollback();
                         }
                         $stmt_auth->close();
                     } else {
-                        echo "<p style='color: red; text-align: center;'>Fehler bei der Benutzerregistrierung.</p>";
+                        include './errors/signup_user.html';
                         $conn->rollback();
                     }
                     $stmt_user->close();
                 }
             } catch (mysqli_sql_exception $e) {
-                // Allgemeine Fehlerbehandlung für Datenbankfehler
-                echo "<p style='color: red; text-align: center;'>Ein Datenbankfehler ist aufgetreten: " . $e->getMessage() . "</p>";
+                include './errors/signup_database.html';
                 $conn->rollback();
             }
         }

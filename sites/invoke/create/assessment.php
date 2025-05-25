@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("isds", $uID, $type_name, $weight_factor, $description);
 
             if ($stmt->execute()) {
-                include '../../errors/assessment_added.html';
+                include '../../success/assessment_added.html';
             } else {
                 include '../../errors/assessment_databaseerror.html';
             }
