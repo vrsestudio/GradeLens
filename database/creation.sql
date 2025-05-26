@@ -1,14 +1,15 @@
 -- Company: UWT GmbH
 -- Author: Jonas Fessler
 -- Date: 2025-05-03
--- Description: SQL script to create the database and tables for the GradeLens application.
--- Version: 1.0
+-- Description: SQL script to create the database and tables for the GradeLens application, aligned with the ERD.
+-- Version: 1.1
 
 -- Database "gradelens"
-CREATE DATABASE gradelens;
+CREATE DATABASE IF NOT EXISTS gradelens;
 USE gradelens;
 
 -- Table "users"
+-- Stores user account information.
 CREATE TABLE users (
     uID INT(11) AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(512) NOT NULL UNIQUE, -- E-Mail must be present and cannot be used twice
@@ -16,13 +17,15 @@ CREATE TABLE users (
 );
 
 -- Table "authentication"
+-- Stores authentication-related information like IP addresses.
 CREATE TABLE authentication (
     aID INT(11) AUTO_INCREMENT PRIMARY KEY,
     lkipa VARCHAR(45), -- Last Known IP Address
     fkipa VARCHAR(45) -- First Known IP Address
 );
 
--- Table "userauthentication" (connects users with authentication)
+-- Table "userauthentication"
+-- Links users with their authentication records (M:N, though likely 1 user to many auth records over time).
 CREATE TABLE userauthentication (
     uID INT(11) NOT NULL,
     aID INT(11) NOT NULL,
@@ -32,35 +35,53 @@ CREATE TABLE userauthentication (
 );
 
 -- Table "subjects"
+-- Stores a global list of subjects.
 CREATE TABLE subjects (
     sID INT(11) AUTO_INCREMENT PRIMARY KEY,
-    uID INT(11) NOT NULL, -- FOREIGN KEY linked to users
-    subject_name VARCHAR(100) NOT NULL,
-    FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE, -- CASCADE to delete subjects when users are deleted
-    UNIQUE (uID, subject_name) -- UNIQUE to ensure a user can only have one subject with the same name
+    subject_name VARCHAR(100) NOT NULL UNIQUE -- Assuming subject names are globally unique
 );
 
--- Table "assessment_types"
-CREATE TABLE assessment_types (
+-- Table "usersubjects"
+-- Links users to the subjects they are associated with (M:N relationship).
+CREATE TABLE usersubjects (
+    uID INT(11) NOT NULL,
+    sID INT(11) NOT NULL,
+    PRIMARY KEY (uID, sID), -- Combined Primary Key
+    FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE,
+    FOREIGN KEY (sID) REFERENCES subjects(sID) ON DELETE CASCADE -- If a subject is deleted, remove user associations.
+);
+
+-- Table "assessmenttype"
+-- Stores a global list of assessment types (e.g., Exam, Homework, Presentation).
+-- Note: ERD shows "assesmenttype", using standard spelling "assessmenttype".
+CREATE TABLE assessmenttype (
     atID INT(11) AUTO_INCREMENT PRIMARY KEY,
-    uID INT(11) NOT NULL, -- FOREIGN KEY linked to users
-    type_name VARCHAR(64) NOT NULL,
-    description VARCHAT(512),
-    weight_factor DECIMAL(5, 2) DEFAULT 1.00,
-    FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE, -- CASCADE to delete assessment types when users are deleted
-    UNIQUE (uID, type_name) -- UNIQUE to ensure a user can only have one assessment type with the same name
+    type_name VARCHAR(64) NOT NULL UNIQUE, -- Name of the assessment type
+    description VARCHAR(512), -- Optional description of the assessment type
+    weight_factor DECIMAL(5, 2) DEFAULT 1.00 -- Default weight for this type of assessment
+);
+
+-- Table "userassessments"
+-- Links users to the global assessment types that are relevant for them (M:N relationship).
+CREATE TABLE userassessments (
+    uID INT(11) NOT NULL,
+    atID INT(11) NOT NULL,
+    PRIMARY KEY (uID, atID), -- Combined Primary Key
+    FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE,
+    FOREIGN KEY (atID) REFERENCES assessmenttype(atID) ON DELETE CASCADE -- If an assessment type is deleted, remove user associations.
 );
 
 -- Table "grades"
+-- Stores the grades achieved by users in specific subjects for certain assessment types.
 CREATE TABLE grades (
     gID INT(11) AUTO_INCREMENT PRIMARY KEY,
     uID INT(11) NOT NULL, -- FOREIGN KEY linked to users
-    sID INT(11) NOT NULL, -- FOREIGN KEY linked to subjects
-    atID INT(11) NOT NULL, -- FOREIGN KEY linked to assessment types
-    grade_value DECIMAL(3, 1) NOT NULL,
-    grade_date DATE NOT NULL,
-    description VARCHAR(255),
+    sID INT(11) NOT NULL, -- FOREIGN KEY linked to global subjects table
+    atID INT(11) NOT NULL, -- FOREIGN KEY linked to global assessmenttype table
+    grade_value DECIMAL(3, 1) NOT NULL, -- The actual grade value
+    grade_date DATE NOT NULL, -- Date when the grade was achieved/recorded
+    description VARCHAR(255), -- Optional description or notes for the grade
     FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE, -- CASCADE to delete grades when users are deleted
     FOREIGN KEY (sID) REFERENCES subjects(sID) ON DELETE RESTRICT, -- RESTRICT to prevent deleting a subject if grades exist for it
-    FOREIGN KEY (atID) REFERENCES assessment_types(atID) ON DELETE RESTRICT -- RESTRICT to prevent deleting an assessment type if grades exist for it
+    FOREIGN KEY (atID) REFERENCES assessmenttype(atID) ON DELETE RESTRICT -- RESTRICT to prevent deleting an assessment type if grades exist for it
 );
