@@ -45,6 +45,7 @@ CREATE TABLE assessment_types (
     atID INT(11) AUTO_INCREMENT PRIMARY KEY,
     uID INT(11) NOT NULL, -- FOREIGN KEY linked to users
     type_name VARCHAR(64) NOT NULL,
+    description VARCHAT(512),
     weight_factor DECIMAL(5, 2) DEFAULT 1.00,
     FOREIGN KEY (uID) REFERENCES users(uID) ON DELETE CASCADE, -- CASCADE to delete assessment types when users are deleted
     UNIQUE (uID, type_name) -- UNIQUE to ensure a user can only have one assessment type with the same name
