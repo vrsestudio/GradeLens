@@ -30,10 +30,10 @@
 
             <form id="login-form" method="post" action="">
                 <section id="emailcontainer-login">
-                    <input type="email" name="email" id="email-login" placeholder="example@gradelens.com">
+                    <input type="email" name="email" id="email-login" placeholder="example@gradelens.com" required>
                 </section>
                 <section id="passwordcontainer-login">
-                    <input type="password" name="password" id="password-login" placeholder="Password">
+                    <input type="password" name="password" id="password-login" placeholder="Password" required>
                 </section>
                 <section id="checkcontainer-login">
                     <button type="submit" id="checkbutton-login">Log In</button>
@@ -46,56 +46,64 @@
 </html>
 
 <?php
+// Pfad zu endsession.php
 include '../api/endsession.php';
+// Pfad zu connectdatabase.php
 include '../api/connectdatabase.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $email_input = $_POST['email'] ?? '';
+    $password_input = $_POST['password'] ?? '';
 
-    $hashed_email = hash('sha256', $email);
+    if (empty($email_input) || empty($password_input)) {
+        include './errors/login_email.html';
+        if (isset($conn) && $conn instanceof mysqli) {
+            $conn->close();
+        }
+        exit();
+    }
 
-    $user_ip_address = $_SERVER['REMOTE_ADDR'] ?? null;
+    $hashed_email = hash('sha256', $email_input);
+    $current_user_ip_address = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN';
 
-    $stmt = $conn->prepare("SELECT uID, password FROM users WHERE email = ?");
+    $stmt = $conn->prepare("SELECT uID, password, SALT FROM users WHERE email = ?");
     $stmt->bind_param("s", $hashed_email);
     $stmt->execute();
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($uID, $stored_password);
+        $stmt->bind_result($uID, $stored_password_hash, $stored_salt);
         $stmt->fetch();
         $stmt->close();
 
-        if (password_verify($password, $stored_password)) {
+        $password_to_verify = $password_input . $stored_salt;
+
+        if (password_verify($password_to_verify, $stored_password_hash)) {
             if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
             $_SESSION['uID'] = $uID;
 
-            $stmt_get_aID = $conn->prepare("SELECT aID FROM userauthentication WHERE uID = ?");
-            $stmt_get_aID->bind_param("i", $uID);
-            $stmt_get_aID->execute();
-            $stmt_get_aID->bind_result($aID);
-            $stmt_get_aID->fetch();
-            $stmt_get_aID->close();
+            // Aktualisiere lkipa UND setze den timestamp explizit auf CURRENT_TIMESTAMP
+            // um sicherzustellen, dass er bei jedem Login aktualisiert wird.
+            $update_stmt = $conn->prepare("UPDATE users SET lkipa = ?, timestamp = CURRENT_TIMESTAMP WHERE uID = ?");
+            $update_stmt->bind_param("si", $current_user_ip_address, $uID);
+            $update_stmt->execute();
+            $update_stmt->close();
 
-            if ($aID) {
-                $stmt_update_lkipa = $conn->prepare("UPDATE authentication SET lkipa = ? WHERE aID = ?");
-                $stmt_update_lkipa->bind_param("si", $user_ip_address, $aID);
-                $stmt_update_lkipa->execute();
-                $stmt_update_lkipa->close();
-            }
-
-            header("Location: /GradeLens/sites/overview.php"); // Absolute URL verwenden
+            include '../api/disconnectdatabase.php';
+            header("Location: /GradeLens/sites/overview.php");
             exit();
         } else {
             include './errors/login_password.html';
         }
     } else {
+        $stmt->close();
         include './errors/login_email.html';
     }
 }
 
-include '../api/disconnectdatabase.php';
+if (isset($conn) && $conn instanceof mysqli && $conn->thread_id) {
+    include '../api/disconnectdatabase.php';
+}
 ?>
