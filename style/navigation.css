@@ -65,9 +65,9 @@
 
     transition: 0.35s ease-in-out, color 0.25s ease-in-out;
     &:hover {
-        border: 2px solid #687172;
+        border: 0.15vw solid #687172;
         text-underline-offset: 10%;
-        transform: translateY(-5px);
+        transform: translateY(-10%);
         cursor: pointer;
         color: #687172;
     }
@@ -104,9 +104,9 @@
 
     transition: 0.35s ease-in-out, color 0.25s ease-in-out;
     &:hover {
-        border: 2px solid #687172;
+        border: 0.15vw solid #687172;
         text-underline-offset: 10%;
-        transform: translateY(-5px);
+        transform: translateY(-10%);
         cursor: pointer;
         color: #687172;
     }
@@ -143,9 +143,9 @@
 
     transition: 0.35s ease-in-out, color 0.25s ease-in-out;
     &:hover {
-        border: 2px solid #687172;
+        border: 0.15vw solid #687172;
         text-underline-offset: 10%;
-        transform: translateY(-5px);
+        transform: translateY(-10%);
         cursor: pointer;
         color: #687172;
     }
