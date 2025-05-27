@@ -218,23 +218,6 @@
     margin-bottom: 1%;
 }
 
-#textcontent {
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-    justify-self: center;
-}
-
-
-
-
-
-
-
-
-
-
-
 ::-webkit-scrollbar {
     width: 12px;
 }

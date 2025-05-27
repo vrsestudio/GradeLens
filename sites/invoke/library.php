@@ -30,19 +30,19 @@ $uID = $_SESSION['uID'] ?? null;
                         if ($result_grades->num_rows > 0) {
                             while ($row = $result_grades->fetch_assoc()) {
                                 echo "<section id='content'>";
-                                echo "<div>Fach: " . htmlspecialchars($row['subject_name']) . "</div>";
-                                echo "<div>Note: " . htmlspecialchars($row['grade_value']) . "</div>";
-                                echo "<div>Datum: " . htmlspecialchars($row['grade_date']) . "</div>";
-                                echo "<div>Beschreibung: " . htmlspecialchars($row['description']) . "</div>";
+                                echo "<div>Subject: " . htmlspecialchars($row['subject_name']) . "</div>";
+                                echo "<div>Grade: " . htmlspecialchars($row['grade_value']) . "</div>";
+                                echo "<div>Date: " . htmlspecialchars($row['grade_date']) . "</div>";
+                                echo "<div>Description: " . htmlspecialchars($row['description']) . "</div>";
                                 echo "</section>";
                                 echo "<div id='gradecontentdivider'></div>";
                             }
                         } else {
-                            echo "Keine Noten gefunden.";
+                            echo "No grades found.";
                         }
                         $stmt_grades->close();
                     } else {
-                        echo "Nicht eingeloggt oder ungültige uID.";
+                        echo "Invalid uID.";
                     }
                     ?>
                 </section>
@@ -71,12 +71,12 @@ $uID = $_SESSION['uID'] ?? null;
                         if ($result_subjects->num_rows > 0) {
                             while ($row = $result_subjects->fetch_assoc()) {
                                 echo "<section id='content'>";
-                                echo "<div>Fach: " . htmlspecialchars($row['subject_name']) . "</div>";
+                                echo "<div>Subject: " . htmlspecialchars($row['subject_name']) . "</div>";
                                 echo "</section>";
                                 echo "<div id='contentdivider'></div>";
                             }
                         } else {
-                            echo "Keine Fächer gefunden.";
+                            echo "No subjects found.";
                         }
                         $stmt_subjects->close();
                     }
@@ -101,12 +101,12 @@ $uID = $_SESSION['uID'] ?? null;
                         while ($row = $result_assessments->fetch_assoc()) {
                             echo "<section id='content'>";
                             echo "<div>Typ: " . htmlspecialchars($row['type_name']) . "</div>";
-                            echo "<div id='textcontent'>Beschreibung: " . htmlspecialchars($row['description']) . "</div>";
+                            echo "<div>Description: " . htmlspecialchars($row['description']) . "</div>";
                             echo "</section>";
                             echo "<div id='contentdivider'></div>";
                         }
                     } else {
-                        echo "Keine Assessment-Typen gefunden.";
+                        echo "No assessments types found.";
                     }
                     $stmt_assessments->close();
                     ?>
