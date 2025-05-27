@@ -30,13 +30,9 @@
 #dynamiccontentpane {
     display: flex;
     background: none;
-    height: 87.5%;
+    height: 87.5%;;
     width: 100%;
+    border: none;
     border-bottom-right-radius: 1vw;
     border-bottom-left-radius: 1vw;
-}
-
-#timomsg {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 5vw;
 }
