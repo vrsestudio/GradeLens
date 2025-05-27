@@ -12,6 +12,7 @@ include '../../../api/connectdatabase.php';
 <link rel="stylesheet" href="/gradelens/style/assessment.css">
 <link rel="stylesheet" href="/gradelens/style/successmessage.css">
 <link rel="stylesheet" href="/gradelens/style/errormessage.css">
+<script src="/gradelens/script/staticnavigation.js" defer></script>
 <body id="background">
 <section id="maincontainer">
     <?php include '../navigation.php'; // Pfad zu navigation.php ?>
