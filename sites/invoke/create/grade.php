@@ -61,7 +61,7 @@ if ($stmt_assessment_types) {
             <section id="selectcontainer">
                 <p id="selecttitle">In which subject did you achieve the grade?</p>
                 <select id="select" title="Subject" name="sID" required>
-                    <option value="">-- Select Subject --</option>
+                    <option value="">-- Select Subject</option>
                     <?php foreach ($subjects as $subject): ?>
                         <option value="<?php echo htmlspecialchars($subject['sID']); ?>">
                             <?php echo htmlspecialchars($subject['subject_name']); ?>
@@ -71,8 +71,8 @@ if ($stmt_assessment_types) {
             </section>
             <section id="selectcontainer">
                 <p id="selecttitle">What type of assessment was it?</p>
-                <select id="select" title="Assessment Type" name="aID" required> {/* Name geändert zu aID */}
-                    <option value="">-- Select Assessment Type --</option>
+                <select id="select" title="Assessment Type" name="aID" required>
+                    <option value="">-- Select Assessment Type</option>
                     <?php foreach ($assessment_types as $assessment_type): ?>
                         {/* Wert ist assessmenttype.aID */}
                         <option value="<?php echo htmlspecialchars($assessment_type['aID']); ?>">
@@ -89,9 +89,9 @@ if ($stmt_assessment_types) {
                 <p id="selecttitle">When was the assessment?</p>
                 <input type="date" id="select" name="grade_date" required>
             </section>
-            <section id="selectdescriptioncontainer"> {/* Korrigierter ID-Name */}
-                <p id="selectdescriptiontitle">Briefly describe the assessment (optional).</p> {/* Korrigierter ID-Name */}
-                <input type="text" id="selectdescription" name="description" placeholder="Enter the description"> {/* Korrigierter ID-Name */}
+            <section id="selectdescriptioncontainer">
+                <p id="selectdescriptiontitle">Briefly describe the assessment (optional).</p>
+                <input type="text" id="selectdescription" name="description" placeholder="Enter the description">
             </section>
             <button id="addbutton" type="submit">Add Grade</button>
         </form>

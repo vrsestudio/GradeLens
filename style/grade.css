@@ -136,7 +136,7 @@
     }
 }
 
-#selectdiscriptioncontainer {
+#selectdescriptioncontainer {
     display: flex;
     flex-direction: column;
     background: none;
@@ -145,7 +145,7 @@
     margin-bottom: 0.5%;
 }
 
-#selectdiscriptiontitle {
+#selectdescriptiontitle {
     margin: 0;
     height: 10%;
     width: 99%;
@@ -163,7 +163,7 @@
     font-size: 1vw;
 }
 
-#selectdiscription {
+#selectdescription {
     min-height: 50%;
     height: fit-content;
     max-height: 125%;
