@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             activeButton = homeButton;
         } else if (contentToLoad === "library.php") {
             activeButton = libraryButton;
-        } else if (contentToLoad === "create.php") {
+        } else if (contentToLoad === "manage.php") {
             activeButton = createButton;
         }
         updateContentAndButton(activeButton, contentToLoad);
@@ -45,5 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     homeButton.addEventListener("click", () => updateContentAndButton(homeButton, "defaultview.php"));
     libraryButton.addEventListener("click", () => updateContentAndButton(libraryButton, "library.php"));
-    createButton.addEventListener("click", () => updateContentAndButton(createButton, "create.php"));
+    createButton.addEventListener("click", () => updateContentAndButton(createButton, "manage.php"));
 });

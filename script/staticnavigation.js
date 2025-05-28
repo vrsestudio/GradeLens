@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     homeButton.addEventListener("click", () => redirectToOverview("defaultview.php"));
     libraryButton.addEventListener("click", () => redirectToOverview("library.php"));
-    createButton.addEventListener("click", () => redirectToOverview("create.php"));
+    createButton.addEventListener("click", () => redirectToOverview("manage.php"));
 });

@@ -61,7 +61,6 @@ if ($stmt_assessment_types) {
             <section id="selectcontainer">
                 <p id="selecttitle">In which subject did you achieve the grade?</p>
                 <select id="select" title="Subject" name="sID" required>
-                    <option value="">-- Select Subject</option>
                     <?php foreach ($subjects as $subject): ?>
                         <option value="<?php echo htmlspecialchars($subject['sID']); ?>">
                             <?php echo htmlspecialchars($subject['subject_name']); ?>
@@ -72,7 +71,6 @@ if ($stmt_assessment_types) {
             <section id="selectcontainer">
                 <p id="selecttitle">What type of assessment was it?</p>
                 <select id="select" title="Assessment Type" name="aID" required>
-                    <option value="">-- Select Assessment Type</option>
                     <?php foreach ($assessment_types as $assessment_type): ?>
                         {/* Wert ist assessmenttype.aID */}
                         <option value="<?php echo htmlspecialchars($assessment_type['aID']); ?>">

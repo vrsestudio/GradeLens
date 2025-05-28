@@ -49,7 +49,7 @@
     color: var(--text-color);
     border-radius: 1vw;
     border: 0.1vw solid #ced8e0;
-    box-shadow: 0 1.75px 7.5px rgba(0, 0, 0, 0.2), 0 1.75px 7.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.175vw 0.75vw rgba(0, 0, 0, 0.2), 0 0.175vw 0.75vw rgba(0, 0, 0, 0.1);
     outline-color: var(--outline);
 
     transition: 0.25s ease-in-out;
@@ -69,7 +69,8 @@
 #createoptionbody {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    flex-grow: 1;
+    width: auto;
     height: 100%;
     background: none;
     border-radius: 1vw;
@@ -91,7 +92,11 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: 10%;
+    min-width: 8%;
+    width: max-content;
+    max-width: 25%;
+    padding-left: 1%;
+    padding-right: 1%;
     height: 100%;
     background: var(--background-top);
     overflow: hidden;

@@ -6,7 +6,7 @@
 <section id="navibuttons">
     <button id="homebutton">HOME</button>
     <button id="librarybutton">LIBRARY</button>
-    <button id="createbutton">ADD</button>
+    <button id="createbutton">MANAGE</button>
     <a id="profilebutton" href="/GradeLens/sites/login.php"><img id="profilebutton-image" src="/GradeLens/source/buttons/profile_button_dark.webp"></a>
 </section>
 </section>

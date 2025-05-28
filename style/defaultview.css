@@ -57,14 +57,14 @@
     border: none;
     overflow-x: hidden;
     overflow-y: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 1.5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2), 0 0.15vw 0.5vw rgba(0, 0, 0, 0.1);
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.25vw;
     color: #687172;
 
     &:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.6vw 1.1vw rgba(0, 0, 0, 0.2), 0 0.175vw 0.6vw rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -76,7 +76,7 @@
     background: var(--background-top);
     color: #687172;
     border-radius: 1vw;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 1.5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2), 0 0.15vw 0.5vw rgba(0, 0, 0, 0.1);
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2vw;
@@ -136,8 +136,8 @@
     display: flex;
     background: var(--background-divider);
     width: 90%;
-    min-height: 5px; /* Give separator a minimum height */
-    height: 0.5vh; /* Can remain a percentage if desired, or use fixed px */
+    min-height: 5px;
+    height: 0.5vh;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5%;
@@ -151,14 +151,14 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Or var(--background-bottom) for less contrast */
+    background: transparent;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #687172;
     border-radius: 10px;
-    border: 3px solid transparent; /* Creates padding around thumb */
+    border: 3px solid transparent;
     background-clip: content-box;
 }
 
@@ -178,5 +178,5 @@ input[type="number"] {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: #687172 var(--background-bottom); /* Or transparent */
+    scrollbar-color: #687172 var(--background-bottom);
 }

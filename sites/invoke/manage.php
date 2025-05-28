@@ -7,7 +7,7 @@
                 <p id="createoptiontext">Add a grade you received in a subject</p>
             </div>
             <div id="createoptionbutton">
-                ADD
+                ADD A GRADE
             </div>
         </a>
     </section>
@@ -17,7 +17,7 @@
                 <p id="createoptiontext">Create a new subject that you have at school</p>
             </div>
             <div id="createoptionbutton">
-                CREATE
+                CREATE A SUBJECT
             </div>
         </a>
     </section>
@@ -27,7 +27,7 @@
                 <p id="createoptiontext">Create a new assessment type</p>
             </div>
             <div id="createoptionbutton">
-                CREATE
+                CREATE ASSESSMENT
             </div>
         </a>
     </section>

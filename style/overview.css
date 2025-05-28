@@ -24,7 +24,7 @@
     width: 100%;
     margin: 1%;
     border-radius: 1vw;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.2), 0 0.5vw 1.5vw rgba(0, 0, 0, 0.1);
 }
 
 #dynamiccontentpane {
