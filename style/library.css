@@ -221,7 +221,6 @@
 
     transition: 0.35s ease-in-out;
     &:hover {
-        cursor: pointer;
         border: 0.15vw solid #687172;
         transform: scale(1.075);
         width: 83%;

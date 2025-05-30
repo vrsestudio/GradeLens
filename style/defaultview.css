@@ -147,6 +147,20 @@
     border-radius: 1vw;
 }
 
+#middletext {
+    height: auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+
+    font-weight: bold;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }

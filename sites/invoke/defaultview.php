@@ -97,7 +97,7 @@ foreach ($grades_by_subject as $sID => $subject_data) {
                         <div id="quickviewtext">
                             Average (Last 3 Months): <?php echo $average_last_3_months !== null ? htmlspecialchars($average_last_3_months) : 'N/A'; ?>
                         </div>
-                        <strong>SUBJECT AVERAGES</strong>
+                        <p id="middletext">SUBJECT AVERAGES</p>
                         <?php if (!empty($subject_averages)): ?>
                             <?php foreach ($subject_averages as $subject_info): ?>
                                 <div id="quickviewtext">
