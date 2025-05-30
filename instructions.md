@@ -1,7 +1,7 @@
 ## GradeLens Setup Instructions
 
 ### Step 1: Install Dependencies
-1. Download and install [XAMP](https://www.apachefriends.org/de/download.html) for your operating system. (Version 8.2.12)
+1. Download and install [XAMPP](https://www.apachefriends.org/de/download.html) for your operating system. (Version 8.2.12)
 
 ### Step 2: Download GradeLens
 1. Download the latest version of GradeLens from the [GitHub repository](https://github.com/vrsestudio/GradeLens/releases/tag/Release)
