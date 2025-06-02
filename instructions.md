@@ -18,7 +18,7 @@ GradeLens is published under the [GNU General Public License v3.0](https://githu
 ### Pre Setup Information
 If you don't want to set up GradeLens on your local machine, you can contact us to temporarily host it for you. Please note that this is a free service and may not be available at all times.
 
-If you want to set up GradeLens on your local machine, follow the instructions below or check out the [GradeLensInstaller](https://github.com/vrsestudio/GradeLensInstaller).
+If you want to set up GradeLens on your local machine, follow the instructions below or check out the [GradeLensInstaller (not working)](https://github.com/vrsestudio/GradeLensInstaller).
 
 ### Step 1: Install Dependencies
 1. Download and install [XAMPP](https://www.apachefriends.org/de/download.html) for your operating system. (Version 8.2.12)
@@ -51,6 +51,5 @@ If you want to set up GradeLens on your local machine, follow the instructions b
 
 ### Done!
 You have successfully set up GradeLens! You can now access it by navigating to `http://localhost/gradelens` or `http://YOURIPADDRESS/gradelens` in your web browser.
-
 
 ##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)
