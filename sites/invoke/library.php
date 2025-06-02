@@ -60,8 +60,8 @@ $uID = $_SESSION['uID'] ?? null;
                         $stmt_subjects = $conn->prepare("
                         SELECT s.subject_name
                         FROM subjects s
-                        INNER JOIN grades g ON s.sID = g.sID
-                        WHERE g.uID = ?
+                        INNER JOIN usersubjects us ON s.sID = us.sID
+                        WHERE us.uID = ?
                         GROUP BY s.subject_name
                     ");
                         $stmt_subjects->bind_param("i", $uID);
@@ -93,22 +93,30 @@ $uID = $_SESSION['uID'] ?? null;
                     $stmt_assessments = $conn->prepare("
                     SELECT type_name, description
                     FROM assessmenttype
-                ");
-                    $stmt_assessments->execute();
-                    $result_assessments = $stmt_assessments->get_result();
+                    WHERE uID = ? 
+                "); // Added WHERE clause to filter by uID
+                    if ($uID && is_numeric($uID) && $stmt_assessments) {
+                        $stmt_assessments->bind_param("i", $uID);
+                        $stmt_assessments->execute();
+                        $result_assessments = $stmt_assessments->get_result();
 
-                    if ($result_assessments->num_rows > 0) {
-                        while ($row = $result_assessments->fetch_assoc()) {
-                            echo "<section id='content'>";
-                            echo "<div>Typ: " . htmlspecialchars($row['type_name']) . "</div>";
-                            echo "<div>Description: " . htmlspecialchars($row['description']) . "</div>";
-                            echo "</section>";
-                            echo "<div id='contentdivider'></div>";
+                        if ($result_assessments->num_rows > 0) {
+                            while ($row = $result_assessments->fetch_assoc()) {
+                                echo "<section id='content'>";
+                                echo "<div>Typ: " . htmlspecialchars($row['type_name']) . "</div>";
+                                echo "<div>Description: " . htmlspecialchars($row['description']) . "</div>";
+                                echo "</section>";
+                                echo "<div id='contentdivider'></div>";
+                            }
+                        } else {
+                            echo "No assessment types found for this user.";
                         }
+                        $stmt_assessments->close();
                     } else {
-                        echo "No assessments types found.";
+                        echo "Could not retrieve assessment types. User not logged in or database error.";
+                        if (!$stmt_assessments && $conn->error) {
+                        }
                     }
-                    $stmt_assessments->close();
                     ?>
                 </section>
             </section>
