@@ -1,6 +1,7 @@
 :root {
     --background-top: #ced8e0;
     --background-bottom: #e2e5ed;
+    --global-margin: auto;
 }
 
 #naviagtioncontainer {

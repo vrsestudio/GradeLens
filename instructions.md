@@ -53,4 +53,4 @@ If you want to set up GradeLens on your local machine, follow the instructions b
 You have successfully set up GradeLens! You can now access it by navigating to `http://localhost/gradelens` or `http://YOURIPADDRESS/gradelens` in your web browser.
 
 
-##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor: [Jonas Fessler](https://github.com/jonasfessler)
+##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)

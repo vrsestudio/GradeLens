@@ -5,6 +5,7 @@
     --opacity-top: 100%;
     --opacity-bottom: 100%;
     --global-border-radius: 1vw;
+    --global-margin: auto;
 }
 
 #authbody {

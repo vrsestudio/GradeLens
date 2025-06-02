@@ -1,3 +1,4 @@
+// Disclaimer
 document.addEventListener("DOMContentLoaded", () => {
     const disclaimerButton = document.getElementById("authdisclaimer");
 

@@ -126,3 +126,5 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
+
+##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)

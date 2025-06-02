@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/GradeLens/style/create.css">
+<meta charset="UTF-8">
 <section id="createcontainer">
     <div id="buffer"></div>
     <section id="createoptioncontainer">

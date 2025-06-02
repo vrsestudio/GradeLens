@@ -41,3 +41,5 @@ If you encounter any issues while using the project, please follow these steps:
 13. **Be open to collaboration**: If someone else has already reported a similar issue or suggestion, consider collaborating with them to find a solution. This can help streamline the process and lead to a better outcome for everyone involved.
 14. **Be mindful of the project's goals**: When reporting an issue or suggesting a new feature, keep in mind the project's goals and objectives. Make sure your suggestion aligns with the project's vision and will benefit the community as a whole.
 15. **Be proactive**: If you notice a recurring issue or have an idea for a new feature, consider taking the initiative to address it. This can help improve the project and demonstrate your commitment to its success.
+
+##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)

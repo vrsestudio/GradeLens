@@ -25,3 +25,5 @@ We will take actions immediately to mitigate the impact of the incident. This ma
 - Conducting a post-incident review to identify lessons learned and improve future incident response
 - Implementing additional security measures to prevent similar incidents in the future
 - Reviewing and updating security policies and procedures as needed
+
+##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)

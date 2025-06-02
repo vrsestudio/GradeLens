@@ -3,6 +3,7 @@
     --background-bottom: #e2e5ed;
     --text-color: black;
     --outline: #9ca1ac;
+    --global-margin: auto;
 }
 
 #createcontainer {
@@ -118,42 +119,6 @@
         color: #687172;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ::-webkit-scrollbar {
     width: 12px;

@@ -46,9 +46,7 @@
 </html>
 
 <?php
-// Pfad zu endsession.php
 include '../api/endsession.php';
-// Pfad zu connectdatabase.php
 include '../api/connectdatabase.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -84,8 +82,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             $_SESSION['uID'] = $uID;
 
-            // Aktualisiere lkipa UND setze den timestamp explizit auf CURRENT_TIMESTAMP
-            // um sicherzustellen, dass er bei jedem Login aktualisiert wird.
             $update_stmt = $conn->prepare("UPDATE users SET lkipa = ?, timestamp = CURRENT_TIMESTAMP WHERE uID = ?");
             $update_stmt->bind_param("si", $current_user_ip_address, $uID);
             $update_stmt->execute();

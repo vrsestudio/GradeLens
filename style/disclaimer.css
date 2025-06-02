@@ -2,6 +2,7 @@
     --background-top: #ced8e0;
     --background-bottom: #e2e5ed;
     --border-radius: 1vw;
+    --global-margin: auto;
 }
 
 #disclaimer {

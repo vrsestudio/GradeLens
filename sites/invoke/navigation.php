@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/gradelens/style/navigation.css">
+<meta charset="UTF-8">
 <section id="naviagtioncontainer">
 <section id="navilogo">
     <img id="navilogo-image" src="/gradelens/source/project/logo_gradelens_dark_transparent.webp">

@@ -4,6 +4,7 @@
     --text-color: black;
     --outline: #9ca1ac;
     --submitbutton: #ced8e0;
+    --global-margin: auto;
 }
 
 #background {

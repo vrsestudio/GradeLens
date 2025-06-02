@@ -12,7 +12,8 @@
     <section id="dynamiccontentpane">
     </section>
 </section>
-<script src="/GradeLens/script/dynamicnavigation.js"></script> </body>
+<script src="/GradeLens/script/dynamicnavigation.js"></script>
+</body>
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

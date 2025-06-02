@@ -6,7 +6,7 @@ $uID = $_SESSION['uID'] ?? null;
 ?>
 
     <link rel="stylesheet" href="/GradeLens/style/library.css">
-
+    <meta charset="UTF-8">
     <section id="librarybody">
         <section id="gradeside">
             <section id="leftcontentcontainer">

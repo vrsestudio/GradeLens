@@ -53,3 +53,5 @@ We use some technical measures to ensure our site can not be accessed by unautho
 We also regularly monitor our systems for any potential security threats and take immediate action to address any issues that arise.
 
 Besides that we built our own measures against common attacks like Brute Force Attacks and Forced Browsing.
+
+##### GradeLens and GradeLensInstaller are published by [vrsestudio](https://github.com/vrsestudio/). Main contributor is: [Jonas Fessler](https://github.com/jonasfessler)

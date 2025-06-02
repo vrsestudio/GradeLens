@@ -1,3 +1,4 @@
+// Dynamic Authentication
 document.addEventListener("DOMContentLoaded", () => {
     const loginButton = document.getElementById("loginbutton");
     const signupButton = document.getElementById("signupbutton");

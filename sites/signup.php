@@ -45,7 +45,6 @@
         </section>
 
         <?php
-        // Pfad zu connectdatabase.php
         include '../api/connectdatabase.php';
         ?>
         <?php
@@ -55,7 +54,7 @@
             $password_input = $_POST['password'] ?? '';
 
             if (strlen($password_input) < 8) {
-                include './errors/signup_user.html'; // Oder eine spezifischere Passwort-Fehlerseite
+                include './errors/signup_user.html';
                 if (isset($conn) && $conn instanceof mysqli) {
                     $conn->close();
                 }
@@ -63,14 +62,10 @@
             }
 
             $user_ip_address = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN';
-            $hashed_email = hash('sha256', $email_input); // E-Mail wird gehasht gespeichert
+            $hashed_email = hash('sha256', $email_input);
 
-            // Generiere einen 16-stelligen zufälligen Salt
-            // random_bytes ist kryptographisch sicher, bin2hex konvertiert es in einen Hex-String.
-            // 8 Bytes ergeben 16 Hex-Zeichen.
             $salt = bin2hex(random_bytes(8));
 
-            // Hänge den Salt an das Passwort an, bevor es gehasht wird
             $password_with_salt = $password_input . $salt;
             $hashed_password = password_hash($password_with_salt, PASSWORD_BCRYPT);
 
@@ -89,8 +84,6 @@
                 } else {
                     $check_stmt->close();
 
-                    // Benutzer in 'users' Tabelle einfügen, inklusive fkipa, lkipa und SALT
-                    // Der Timestamp wird durch DEFAULT CURRENT_TIMESTAMP in der DB gesetzt
                     $stmt_user = $conn->prepare("INSERT INTO users (email, password, fkipa, lkipa, SALT) VALUES (?, ?, ?, ?, ?)");
                     $stmt_user->bind_param("sssss", $hashed_email, $hashed_password, $user_ip_address, $user_ip_address, $salt);
 
@@ -107,15 +100,12 @@
                         include '../api/disconnectdatabase.php';
                         exit();
                     } else {
-                        // Zeige den Datenbankfehler an, falls execute fehlschlägt
-                        // error_log("Signup User Insert Error: " . $stmt_user->error);
                         include './errors/signup_user.html';
                         $conn->rollback();
                     }
                     $stmt_user->close();
                 }
             } catch (mysqli_sql_exception $e) {
-                // error_log("Signup Database Exception: " . $e->getMessage());
                 include './errors/signup_database.html';
                 $conn->rollback();
             }

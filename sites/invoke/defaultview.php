@@ -3,7 +3,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 if (!isset($_SESSION['uID'])) {
-    // Redirect to login if uID is not set
     header("Location: /GradeLens/sites/login.php");
     exit();
 }
@@ -14,7 +13,6 @@ $uID = $_SESSION['uID'];
 $current_date = date('Y-m-d');
 $three_months_ago = date('Y-m-d', strtotime('-3 months'));
 
-// Function to calculate weighted average
 function calculateWeightedAverage($grades) {
     $total_weighted_grade = 0;
     $total_weight = 0;
@@ -28,7 +26,6 @@ function calculateWeightedAverage($grades) {
     return $total_weight > 0 ? round($total_weighted_grade / $total_weight, 2) : null;
 }
 
-// Fetch all grades with their weights for the user
 $all_grades_data = [];
 $stmt_all_grades = $conn->prepare("
     SELECT g.sID, s.subject_name, g.grade_value, g.grade_date, at.weight_factor
@@ -48,19 +45,15 @@ if ($stmt_all_grades) {
     $stmt_all_grades->close();
 }
 
-// Calculate overall average (average since first grade)
 $average_since_first_grade = calculateWeightedAverage($all_grades_data);
 
-// Filter grades for the last 3 months
 $grades_last_3_months = array_filter($all_grades_data, function ($grade) use ($three_months_ago, $current_date) {
     return $grade['grade_date'] >= $three_months_ago && $grade['grade_date'] <= $current_date;
 });
 $average_last_3_months = calculateWeightedAverage($grades_last_3_months);
 
-// Current overall average is the same as average since first grade
 $current_overall_average = $average_since_first_grade;
 
-// Calculate average for each subject
 $subject_averages = [];
 $grades_by_subject = [];
 
@@ -78,6 +71,7 @@ foreach ($grades_by_subject as $sID => $subject_data) {
 
 ?>
     <link rel="stylesheet" href="/GradeLens/style/defaultview.css">
+    <meta charset="UTF-8">
     <section id="defaultbody">
         <section id="graphside">
             <section id="graphcontainer">

@@ -1,4 +1,4 @@
-// GradeLens/script/dynamicnavigation.js
+// Dynamic Navigation
 document.addEventListener("DOMContentLoaded", () => {
     const homeButton = document.getElementById("homebutton");
     const libraryButton = document.getElementById("librarybutton");

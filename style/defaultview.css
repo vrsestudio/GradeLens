@@ -6,6 +6,7 @@
     --background-divider: #a4adb8;
     --opacity-top: 100%;
     --opacity-bottom: 100%;
+    --global-margin: auto;
 }
 
 #defaultbody {
