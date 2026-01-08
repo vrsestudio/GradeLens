@@ -10,23 +10,23 @@ GradeLens is a tool designed to help students analyze their grades and understan
 - **Data Privacy**: GradeLens prioritizes user privacy and ensures that all data is stored securely and confidentially.
 
 ## Installation
-You don't actually have to install anything. GradeLens is a web-based tool that can be accessed through your browser. Just visit the [GradeLens website](http://localhost/GradeLens/index.html) to get started.
+You don't actually have to install anything. GradeLens is a web-based tool that can be accessed through your browser. Just visit your local [GradeLens website](http://localhost/GradeLens/index.html) to get started.
 
 ## Usage
-1. Visit the [GradeLens website](http://localhost/GradeLens/index.html).
+1. Visit your local [GradeLens website](http://localhost/GradeLens/index.html).
 2. Sign Up or Log In to your account.
 3. Input your grades for different subjects and assignments.
 4. Explore the visualizations and insights provided by GradeLens.
 5. Use the insights to improve your academic performance.
 6. Close the Site when you're done.
 
-If you want to delete your account, please contact us at [jonas.fessle@uwtgroup.com](mailto:jonasfessler@uwtgroup.com) with the subject "GradeLens: Delete Account". We will delete your account and all associated data within 24 hours.
+If you want to delete your account, please contact us at [jonas.fessler@uwtgroup.com](mailto:jonasfessler@uwtgroup.com) with the subject "GradeLens: Delete Account". We will delete your account and all associated data within 24 hours.
 
 ## Contributing
 We welcome contributions to GradeLens! If you would like to contribute, please fork the repository and submit a pull request. We appreciate your help in making GradeLens better for everyone.
 
 ## Important Privacy Note
-GradeLens is a web-based tool which is hosted on our servers. This means that we are actively collecting data like your IP address, or other identifying information. We are not selling or using this data for our personal enrichment. The collection of this data is purely used for identification to personalise the experience for all our users.
+GradeLens is a web-based tool which is hosted on your own server. This means that you are actively collecting data like your IP address, or other identifying information. As you are collecting it yourself we are not selling or using this data for our personal enrichment. The collection of this data is purely used for identification to personalise the experience for all our users.
 
 ## Privacy Policy
 GradeLens is committed to protecting your privacy. We do not share your personal information with third parties at all. All data is stored securely and is only accessible by you. For more details, please read our [Privacy Policy](PRIVACY.md).
