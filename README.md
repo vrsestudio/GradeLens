@@ -20,8 +20,6 @@ You don't actually have to install anything. GradeLens is a web-based tool that 
 5. Use the insights to improve your academic performance.
 6. Close the Site when you're done.
 
-If you want to delete your account, please contact us at [jonas.fessler@uwtgroup.com](mailto:jonasfessler@uwtgroup.com) with the subject "GradeLens: Delete Account". We will delete your account and all associated data within 24 hours.
-
 ## Contributing
 We welcome contributions to GradeLens! If you would like to contribute, please fork the repository and submit a pull request. We appreciate your help in making GradeLens better for everyone.
 
